@@ -9,7 +9,7 @@ import {
   SimpleGrid,
   Box,
   Table,
-  Link,
+  // Link,
   Tr,
   Td,
   Tbody,
@@ -543,7 +543,7 @@ function Chart4({ data, labels, colors }) {
 }
 
 function Results() {
-  const { language, setLanguage , country, setCountry } = useContext(AppContext);
+  const { language , country, setCountry } = useContext(AppContext);
   const { t } = useTranslation();
 
   const handleChangeCountry = (e) => {

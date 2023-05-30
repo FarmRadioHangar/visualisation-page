@@ -17,8 +17,14 @@ i18n.use(initReactI18next).init({
         // Hero
         HERO_INTRO_1:
           "We asked small-scale farmers in four countries for their perspectives on how to create equitable, sustainable, and productive food systems for all.",
+        HERO_INTRO_1i:
+           "We asked rural people in Burkina Faso and Ethiopia about climate change: how it’s impacting them; what changes they’ve made on their farms; and what governments can do to support the most vulnerable when it comes to adapting to climate change.",
         HERO_INTRO_2:
           "Click on the floating bubbles and icons to listen to their voices.",
+        HOME_INTRO:
+          "As nations, organizations, and individuals, we all must commit to listening and taking action together. On Air Dialogues bring the voices of those least heard — small-scale farming women, men and youth in rural Africa — to the global conversations that impact them.",
+        HOME_CAP:
+          "On Air Dialogues are a Farm Radio International service that combines the power of radio with mobile phones", 
         // About page
         ABOUT_P_1:
           "Over the course of three weeks in June 2021, and in partnership with IFAD, World Vision Canada, and the Food Security Policy Group, Farm Radio International gathered thousands of small-scale farmers’ and other rural peoples’ perspectives on how to create equitable, sustainable, and productive food systems.",
@@ -40,7 +46,30 @@ i18n.use(initReactI18next).init({
           "World Vision Canada is a Christian relief, development and advocacy organization working to create lasting change in the lives of children, families and communities to overcome poverty and injustice.",
         ABOUT_P_13:
           "The Canadian Food Security Policy Group is a network of Canadian development and humanitarian organizations with expertise in global food systems, and food security in the Global South.",
-        // Summary
+          ABOUT_P_1i:
+          "In October 2022,  Farm Radio International, in partnership with IFAD, asked rural people in Burkina Faso and Ethiopia how climate change is impacting them and how they’ve changed their practices to keep up. This research was made possible by financial support from IFAD and Global Affairs Canada.",
+        ABOUT_P_2i:
+          "The goal: bring the voices of rural farmers to the global conversation on climate change ahead of COP27.",
+        ABOUT_P_2ii:
+          "Thousands of people responded to the call, sharing the work their communities have done on climate change – and what support is needed most.",
+        ABOUT_P_3i:
+          "Radio is accessible, and reaches people everywhere. And with mobile phones, it has even more power.",
+        ABOUT_P_4i:
+          "We worked with seven stations in Burkina Faso, and Ethiopia to create 21 original episodes of radio programming, complete with mobile phone-based listener polling. In other words “on air dialogues.” On air, broadcasters invited local experts, farmers, and guests to speak their mind and share their knowledge. Off air, we engaged listeners to join in the discussion with their own thoughts.",
+        ABOUT_P_5i:
+          "We wanted to know: What changes have had the biggest impact on their farms? How have their communities taken action in response to climate change? What kind of information and advice is needed to help them adapt? And what message did they want to send to governments and global leaders?",
+        ABOUT_P_9i:
+          "“The summit will only be effective at setting out the pathway to 2030 if we successfully leverage the collective knowledge and experience of the broadest possible cross-section of the population.” – UN Special Envoy Dr. Agnes Kalibata",
+        ABOUT_P_10i:
+          "This research was led by Farm Radio International in partnership with  the International Fund for Agricultural Development (IFAD)  ahead of the 2022 United Nations Climate Change Conference, COP27. Farm Radio International would like to thank all those who made this report possible. We express our deep gratitude to all the farmers and broadcasters who shared their time and information with us. This research was made possible by financial support from IFAD and Global Affairs Canada.",
+        ABOUT_P_11i:
+          "Farm Radio International is an international non-governmental organization uniquely focused on improving the lives of rural Africans through the world’s most accessible communications tool, radio, in combination with ICTs.",
+        ABOUT_P_12i:
+          "IFAD is an international financial institution and a United Nations specialized agency based in Rome – the United Nations food and agriculture hub. IFAD invests in rural people, empowering them to reduce poverty, increase food security, improve nutrition and strengthen resilience.",
+        ABOUT_P_13i:
+          "World Vision Canada is a Christian relief, development and advocacy organization working to create lasting change in the lives of children, families and communities to overcome poverty and injustice.",
+        
+          // Summary
         SUMMARY_P_1:
           "We asked small-scale farmers to tell us their thoughts and concerns about food systems",
         SUMMARY_P_2:
@@ -57,7 +86,29 @@ i18n.use(initReactI18next).init({
           "Where would you turn to for information to help you cope with future threats to your family and livelihood?",
         RESULTS_QUESTION_6:
           "Climate change can have a big effect on farming. Which of the following would help you as a farmer to best deal with changes in the weather?",
-      },
+        
+          SUMMARY_P_1i:
+          "What we learned",
+        SUMMARY_P_2i:
+          "Using call-in polling in combination with radio programs, we asked small-scale farmers to tell us their thoughts and concerns about climate change. Here’s what they had to say:",
+        RESULTS_QUESTION_1i:
+          "Worldwide, there have been changes in the climate. What kind of changes have you seen in your area since you were a child?",
+        RESULTS_QUESTION_2i:
+          "What change in the environment has had the biggest impact on your farming?",
+        RESULTS_QUESTION_3i:
+          "How is farming or livestock keeping now compared to the past?",
+        RESULTS_QUESTION_4i:
+          "What types of changes have you and your family made on your own farm?",
+        RESULTS_QUESTION_5i:
+          "Has your community taken action in response to climate change?",
+        RESULTS_QUESTION_6i:
+          "What is the most important kind of information and advice that farmers need to adapt to changes in the environment?",
+        RESULTS_QUESTION_7i:
+          "What can the government do to help farmers like you adapt to these changes?",
+        RESULTS_QUESTION_8i:
+          "What is the best way to protect or increase the diversity of plants, animals, insects, fish and other forms of life?",
+        },
+
     },
     fr: {
       translation: {

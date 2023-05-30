@@ -1,10 +1,73 @@
+@font-face { 
+  font-family: "BebasR";
+  src: local(BebasRegular),
+  url(/src/font/BebasRegular.woff2) format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "BebasB";
+  src: local(BebasBook),
+  url(/src/font/BebasBook.woff2) format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "BebasBold";
+  src: local(BebasBold),
+  url(/src/font/BebasBold.woff2) format("woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "BebasL";
+  src: local(BebasLight),
+  url(/src/font/BebasLight.woff2) format("woff2");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "OSansL";
+  src: local(OSansLight),
+  url(/src/font/OSansLight.woff2) format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "OSansR";
+  src: local(OSansRegular),
+  url(/src/font/OSansRegular.woff2) format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "OSansM";
+  src: local(OSansMedium),
+  url(/src/font/OSansMedium.woff2) format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "OSansSB";
+  src: local(OSansSemiBold),
+  url(/src/font/OSansSemiBold.woff2) format("woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "OSansB";
+  src: local(OSansBold),
+  url(/src/font/OSansBold.woff2) format("woff2");
+  font-weight: 700;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "OSansR", "BebasR", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #606060;
 }
 
 code {
