@@ -3,15 +3,12 @@ import {
   Img,
   Link,
   Button,
-  Select,
   Spacer,
   Stack,
   Box,
   Flex,
   Text,
 } from "@chakra-ui/react";
-import logo from "../img/on-air-dialogues.svg";
-import logoFr from "../img/dialogues_fr.png";
 import logoFrAlt from "../img/dialogues_fr_alt.png";
 import logoAlt from "../img/on-air-dialogues-white.svg";
 import { AppContext } from "../contexts/App";
@@ -28,7 +25,6 @@ function MenuItem({ children, isLast, to = "/", ...props }) {
 }
 
 function MenuLinks({ isOpen }) {
-  const { language, setLanguage } = useContext(AppContext);
   const { setAboutPageVisible } = useContext(AppContext);
   const { t } = useTranslation();
 
@@ -43,23 +39,24 @@ function MenuLinks({ isOpen }) {
         justify={["center", "space-between", "flex-end", "flex-end"]}
         direction={["column", "row", "row", "row"]}
         pt={[4, 4, 0, 0]}
+        fontWeight={"600"}
       >
         <Spacer display={{ base: "none", sm: "block" }} />
         <MenuItem
           onClick={() => {
             setAboutPageVisible(true);
           }}
-          color={{ lg: "#fff", md: "#fff", sm: "white" }}
-          to="#about"
+          color={{ lg: "white", md: "white", sm: "white" }}
+          to={`/oad2022`}
         >
-          {t("About the project")}
+          {t("OAD22")}
         </MenuItem>
         <MenuItem
           onClick={() => {
             setAboutPageVisible(false);
           }}
-          color={{ lg: "#fff", md: "#fff", sm: "white" }}
-          to="#insights"
+          color={{ lg: "white", md: "white", sm: "white" }}
+          to={`/oad2022#insights`}
         >
           {t("Insights")}
         </MenuItem>
@@ -67,15 +64,24 @@ function MenuLinks({ isOpen }) {
           onClick={() => {
             setAboutPageVisible(false);
           }}
-          color={{ lg: "#fff", md: "#fff", sm: "white" }}
-          to="#results"
+          color={{ lg: "white", md: "white", sm: "white" }}
+          to={`/oad2022#results`}
         >
           {t("Explore the results")}
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            setAboutPageVisible(true);
+          }}
+          color={{ lg: "white", md: "white", sm: "white" }}
+          to={`/oad2022/about-oad22`}
+        >
+          {t("About OAD22")}
         </MenuItem>
       
         <Link
           w={{ base: "100%", sm: "auto" }}
-          href="#report"
+          href="/oad2022#report"
           onClick={() => {
             setAboutPageVisible(false);
           }}
@@ -170,11 +176,13 @@ function Header(props) {
     <NavBarContainer {...props}>
       <Box cursor="pointer">
         <Box display={["flex", "flex", "none", "none"]}>
+        <a href="/">
           {'fr' === language ? (
             <Img src={logoFrAlt} w={110} />
           ) : (
             <Img src={logoAlt} w={90} />
           )}
+          </a>
         </Box>
         <Box display={["none", "none", "flex", "flex"]}>
           <a href="/">

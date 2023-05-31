@@ -1,5 +1,5 @@
 // import React, { useContext } from "react";
-// import Footer from "./Footer22";
+import Footer from "./Footer22";
 // import Header from "./Header";
 import Hero from "./homeHero";
 // import About from "./About22";
@@ -12,10 +12,7 @@ function Home() {
 
   return (
     <>
-      
       <Hero />
-      
-      {/* <Footer /> */}
     </>
   );
 }

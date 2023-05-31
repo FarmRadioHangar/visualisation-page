@@ -1,12 +1,11 @@
-// import React, { useState, useRef } from "react";
-// import resultsBf from "../data/bf22.json";
-// import resultsEt from "../data/et22.json"; 
-import Header from "./Header22";
-import { Stack, Box, Heading, Text, Container, SimpleGrid, Grid, GridItem, } from "@chakra-ui/react";
+import { Stack, Box, Heading, Text, Container, SimpleGrid, Grid, GridItem, useColorModeValue,} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 // import { BsArrowRightCircle } from 'react-icons/bs';
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
+import Header from "./homeHeader";
 import hero from "../img/Hero2.jpg"
+import oad22bg from "../img/oad22Tilebg.jpg"
+import oad21bg from "../img/oad21Tilebg.jpg"
 import lbg from "../img/layoutBG.png"
 
 
@@ -28,7 +27,7 @@ function Hero22() {
                   pb={100}  
                 >
                 
-                  <Container maxW={"8xl"} zIndex={10} position={"relative"} mb={35}>
+                  <Container maxW={"7xl"} zIndex={10} position={"relative"} mb={35}>
                     <Header  bg={"transparent"} mb={20}/>
                       <SimpleGrid columns={2} spacing={0} alignItems={"left"} >
                         
@@ -48,13 +47,13 @@ function Hero22() {
       </Box>
 
       <Box bg={`url(${lbg})`} backgroundSize="cover" position={"relative"}>
-        <Container maxW={"8xl"} zIndex={10} position={"relative"} py={{sm: 15, md: 20,}}>
+        <Container maxW={"7xl"} zIndex={10} position={"relative"} py={{sm: 15, md: 20,}}>
           <Grid
-            templateColumns='repeat(6, 1fr)'
+            templateColumns='repeat(12, 1fr)'
             gap={1}
             pt={{ base: 4, md: 10, }}
           >
-            <GridItem colSpan={{sm:"12", md: "5"}} fontFamily={"OSansM"} >
+            <GridItem colSpan={{sm:"12", md: "11"}} fontFamily={"OSansM"} >
                 <Box mb={{ base: 8, md: 20 }}>
                   <Heading
                     mb={5}
@@ -86,12 +85,12 @@ function Hero22() {
               <Text fontFamily={"OSansB"} fontSize={"82px"} lineHeight={"95px"} >
               17K<Text as='span' color={"#4c9f38"}>+</Text>
               </Text>
-              <Text fontSize={"20px"} lineHeight={"33px"} fontFamily={"OSansR"} >
+              <Text fontSize={"18px"} lineHeight={"33px"} fontFamily={"OSansR"} >
               <Text as='span' fontWeight={"700"}>rural people</Text> have shared their thoughts, opinions, needs and ideas for a better future since the beginning of On Air Dialogues.
               </Text>
             </GridItem>  
             <GridItem colStart={6} colEnd={13} fontFamily={"OSansR"} pt={ "30px" }> 
-              <Text fontSize={"25px"} lineHeight={"38px"} >
+              <Text fontSize={"22px"} lineHeight={"38px"} >
                 When farmers’ voices and perspectives are amplified, we can base decisions, policies, and programs on what people really need and want. Learning from farmers’ vast knowledge and experience can bring the world one step closer to ensuring solutions are equitable, sustainable, and productive for all.
               </Text>
             </GridItem>
@@ -102,7 +101,7 @@ function Hero22() {
 
 
       <Box bg={`url(${lbg})`} backgroundSize="contain" bgColor={"#f6f6f6"} position={"relative"} py={5}>
-        <Container maxW={"8xl"} zIndex={10} position={"relative"} pt={10}>
+        <Container maxW={"7xl"} zIndex={10} position={"relative"} pt={10}>
 
         <Grid
             templateColumns='repeat(6, 1fr)'
@@ -139,19 +138,33 @@ function Hero22() {
                   mt={10}
                   py={30}
                 >
-                  <Link to={`/oad2022`}>  
+                  <Link to={`/oad2022`} >  
                     <Box 
-                      minHeight="700px"
+                      minHeight="680px"
                       p={20}
+                      pt={40}
                       border={"1px solid #fffff"}
                       borderRadius="5px"
                       bgColor={"#ffffff"}
                       position={"relative"}
+                      transition={'padding 0.8s ease, background 0.8s ease'}
+                      _hover={{
+                        pt:"52",
+                        bgColor: "transparent",
+                        color:"white",
+                        bg:`linear-gradient(0deg, rgb(0 0 0), rgb(36 36 36 / 7%)),url(${oad22bg})`,
+                        bgPosition:"center",
+                        bgSize:"cover",
+                        bgRepeat:"no-repeat",
+                        
+                      }}
                     >
-                      <Text fontSize="25px" fontFamily={"OSansSB"} letterSpacing={"-1px"} pt={"50px"}>
+                      <Text fontSize="23px" fontFamily={"OSansSB"} letterSpacing={"-1px"} pt={"50px"}>
                         OAD: Listening to Rural Africans 2022 
                       </Text>
-                      <Text  fontSize="7xl" fontFamily={"OSansB"} letterSpacing={"-2px"} color={"#4c9f38"} lineHeight={"8xl"} pb={"40px"}>
+                      <Text  fontSize="6xl" fontFamily={"OSansB"} 
+                      letterSpacing={"-2px"} color={"#4c9f38"} 
+                      lineHeight={"8xl"} pb={"40px"}>
                         Climate Change
                       </Text>
                       <Text fontSize="18px">
@@ -163,7 +176,7 @@ function Hero22() {
                         fontSize="20px" fontFamily={"OSansM"} 
                         letterSpacing={"-1px"} color={"#818181"}
                         position={"absolute"}
-                        bottom={"10"}
+                        bottom={"14"}
                       >
                         October 2022
                       </Text>
@@ -179,18 +192,31 @@ function Hero22() {
                     </Box>
                   </Link>  
                   <Link to={`/oad2021`}>
-                      <Box 
-                        minHeight="700px"
-                        p={20}
-                        borderRadius="5px"
-                        bgColor={"#E8E9EA"}
-                        position={"relative"}
-                      >
-                        <Text fontSize="25px" fontFamily={"OSansSB"} letterSpacing={"-1px"} pt={"50px"}>
+                  <Box 
+                      minHeight="680px"
+                      p={20}
+                      pt={40}
+                      border={"1px solid #fffff"}
+                      borderRadius="5px"
+                      bgColor={"#E8E9EA"}
+                      position={"relative"}
+                      transition={'padding 0.8s ease, background 0.8s ease'}
+                      _hover={{
+                        pt:"52",
+                        bgColor: "transparent",
+                        color:"white",
+                        bg:`linear-gradient(0deg, rgb(0 0 0), rgb(36 36 36 / 7%)),url(${oad21bg})`,
+                        bgPosition:"center",
+                        bgSize:"cover",
+                        bgRepeat:"no-repeat",
+                        
+                      }}
+                    >
+                        <Text fontSize="23px" fontFamily={"OSansSB"} letterSpacing={"-1px"} pt={"50px"}>
                           OAD: Listening to Rural Africans 2021 
                         </Text>
                         <Text  
-                          fontSize="7xl" fontFamily={"OSansB"} 
+                          fontSize="6xl" fontFamily={"OSansB"} 
                           letterSpacing={"-2px"} color={"#4c9f38"} 
                           lineHeight={"8xl"} pb={"40px"}
                         >
@@ -205,7 +231,7 @@ function Hero22() {
                           fontSize="20px" fontFamily={"OSansM"} 
                           letterSpacing={"-1px"} color={"#818181"}
                           position={"absolute"}
-                          bottom={"10"}
+                          bottom={"14"}
                         >
                           June 2021
                         </Text>
@@ -226,6 +252,72 @@ function Hero22() {
           </Stack>
         </Container>
       </Box>
+
+      <Box bg={`url(${lbg})`} backgroundSize="cover" position={"relative"}>
+        <Container maxW={"7xl"} zIndex={10} position={"relative"} py={{sm: 15, md: 20,}}>
+          <Grid
+            templateColumns='repeat(12, 1fr)'
+            gap={1}
+            pt={{ base: 4, md: 10, }}
+          >
+            <GridItem colSpan={{sm:"12", md: "11"}} fontFamily={"OSansM"} >
+                <Box mb={{ base: 8, md: 20 }}>
+                  <Heading
+                    mb={5}
+                    fontSize={{ base: "4xl", md: "5xl" }}
+                    fontFamily={"OSansB"} 
+                    letterSpacing={"-1px"} 
+                    lineHeight={{ md: "1.2"}} 
+                    >
+                    <Text as='span' color={"#4c9f38"}>On Air Dialogues </Text>  
+                    are a Farm Radio International service that combines the power of radio with mobile phones.
+                  </Heading>
+                </Box>
+
+            </GridItem>  
+
+            <GridItem colSpan={{ sm:"12", md:"1"}} fontFamily={"OSansR"} /> 
+          </Grid>
+
+
+          <Grid
+            templateColumns='repeat(12, 1fr)'
+            gap={1}
+            pb={{sm: 15, md: 20,}}
+          >
+            <GridItem colSpan={{sm:"12", md: "4"}} fontFamily={"OSansR"} >
+              <Text fontSize={"22px"} lineHeight={"22px"} >
+              More than
+              </Text>
+              <Text fontFamily={"OSansB"} fontSize={"82px"} lineHeight={"95px"} >
+              17K<Text as='span' color={"#4c9f38"}>+</Text>
+              </Text>
+              <Text fontSize={"18px"} lineHeight={"33px"} fontFamily={"OSansR"} >
+              <Text as='span' fontWeight={"700"}>rural people</Text> have shared their thoughts, opinions, needs and ideas for a better future since the beginning of On Air Dialogues.
+              </Text>
+            </GridItem>  
+            <GridItem colStart={6} colEnd={13} fontFamily={"OSansR"} pt={ "30px" }> 
+              <Text fontSize={"22px"} lineHeight={"38px"} >
+                When farmers’ voices and perspectives are amplified, we can base decisions, policies, and programs on what people really need and want. Learning from farmers’ vast knowledge and experience can bring the world one step closer to ensuring solutions are equitable, sustainable, and productive for all.
+              </Text>
+            </GridItem>
+          </Grid>
+        </Container>
+        </Box>
+
+
+
+
+
+
+      <Box
+        bg={useColorModeValue("gray.100", "gray.900")}
+        color={useColorModeValue("gray.700", "gray.200")}
+      >
+      <Container as={Stack} maxW={"7xl"} py={8}>
+        <Text fontSize={14} fontWeight={`600`} pt={0}>© 2023 Farm Radio International | Radios Rurales Internationales, All rights reserved | On Air Dialogues(OAD) </Text>
+      </Container>
+    </Box>
     </>
   );
 }

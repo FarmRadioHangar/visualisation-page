@@ -3,14 +3,12 @@ import {
   Img,
   Link,
   Button,
-  Select,
   Spacer,
   Stack,
   Box,
   Flex,
   Text,
 } from "@chakra-ui/react";
-import logo from "../img/on-air-dialogues.svg";
 import logoFr from "../img/dialogues_fr.png";
 import logoFrAlt from "../img/dialogues_fr_alt.png";
 import logoAlt from "../img/on-air-dialogues-white.svg";
@@ -28,7 +26,7 @@ function MenuItem({ children, isLast, to = "/", ...props }) {
 }
 
 function MenuLinks({ isOpen }) {
-  const { language, setLanguage } = useContext(AppContext);
+  // const { language, setLanguage } = useContext(AppContext);
   const { setAboutPageVisible } = useContext(AppContext);
   const { t } = useTranslation();
 
@@ -50,18 +48,17 @@ function MenuLinks({ isOpen }) {
           onClick={() => {
             setAboutPageVisible(true);
           }}
-          
-          color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
-          to={`/oad2021`}
+          color={{ lg: "white", md: "white", sm: "white" }}
+          to={`/oad2022`}
         >
-          {t("OAD21")}
+          {t("OAD22")}
         </MenuItem>
         <MenuItem
           onClick={() => {
             setAboutPageVisible(false);
           }}
-          color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
-          to={`/oad2021#insights`}
+          color={{ lg: "white", md: "white", sm: "white" }}
+          to={`/oad2022#insights`}
         >
           {t("Insights")}
         </MenuItem>
@@ -69,8 +66,8 @@ function MenuLinks({ isOpen }) {
           onClick={() => {
             setAboutPageVisible(false);
           }}
-          color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
-          to={`/oad2021#results`}
+          color={{ lg: "white", md: "white", sm: "white" }}
+          to={`/oad2022#results`}
         >
           {t("Explore the results")}
         </MenuItem>
@@ -78,28 +75,15 @@ function MenuLinks({ isOpen }) {
           onClick={() => {
             setAboutPageVisible(true);
           }}
-          color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
-          to={`/oad2021/about-oad21`}
+          color={{ lg: "white", md: "white", sm: "white" }}
+          to={`/oad2022/about-oad22`}
         >
-          {t("About the project")}
+          {t("About OAD22")}
         </MenuItem>
-        <Select
-          color={{ base: "#dfa400", md: "#4c9f38" }}
-          borderColor={{ base: "#dfa400", md: "#4c9f3880" }}
-          bg={{ sm: "white" }}
-          onChange={(e) => {
-            setLanguage(e.target.value);
-          }}
-          value={language}
-          size="md"
-          w={{ base: "100%", sm: "140px" }}
-        >
-          <option value="en">{t("English")}</option>
-          <option value="fr">{t("French")}</option>
-        </Select>
+        
         <Link
           w={{ base: "100%", sm: "auto" }}
-          href="/oad2021#report"
+          href="/oad2022#report"
           onClick={() => {
             setAboutPageVisible(false);
           }}
@@ -108,10 +92,13 @@ function MenuLinks({ isOpen }) {
           <Button
             size="md"
             rounded="md"
-            color={"white"}
-            bg={"#4c9f38"}
+            color={"black"}
+            bg={"white"}
+            border={"2px solid white"}
             _hover={{
-              bg: "#4c9f38",
+              bg: "transparent",
+              color:"white",
+              border:"2px solid white",
             }}
             w={{ base: "100%", sm: "auto" }}
           >
@@ -172,7 +159,7 @@ function NavBarContainer({ children, ...props }) {
       wrap="wrap"
       w="100%"
       mb={0}
-      p={8}
+      pt={8}
       bg={["#dfa400", "#dfa400", "white", "white"]}
       color={["white", "white", "primary.700", "primary.700"]}
       {...props}
@@ -182,7 +169,7 @@ function NavBarContainer({ children, ...props }) {
   );
 }
 
-function Header(props) {
+function Header2(props) {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const { language } = useContext(AppContext);
@@ -191,20 +178,18 @@ function Header(props) {
     <NavBarContainer {...props}>
       <Box cursor="pointer">
         <Box display={["flex", "flex", "none", "none"]}>
-        <a href="/">
           {'fr' === language ? (
             <Img src={logoFrAlt} w={110} />
           ) : (
             <Img src={logoAlt} w={90} />
           )}
-          </a>
         </Box>
         <Box display={["none", "none", "flex", "flex"]}>
           <a href="/">
             {'fr' === language ? (
               <Img src={logoFr} w={140} />
             ) : (
-              <Img src={logo} w={120} />
+              <Img src={logoAlt} w={130} />
             )}
           </a>
         </Box>
@@ -215,4 +200,4 @@ function Header(props) {
   );
 }
 
-export default Header;
+export default Header2;

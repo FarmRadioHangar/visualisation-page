@@ -11,6 +11,8 @@ import {
 import photo4 from "../img/photo4.jpg";
 import { AppContext } from "../contexts/App";
 import { Trans, useTranslation } from "react-i18next";
+import Header from "./Header";
+import Footer from "./Footer";
 
 function About() {
   const { setAboutPageVisible } = useContext(AppContext);
@@ -18,6 +20,8 @@ function About() {
 
   return (
     <>
+
+      <Header />
       <Box bg="#dfa400">
         <Container maxW={"7xl"} zIndex={10} position={"relative"}>
           <Stack direction={{ base: "column", lg: "row" }}>
@@ -84,7 +88,7 @@ function About() {
                       onClick={() => {
                         setAboutPageVisible(false);
                       }}
-                      href="#report"
+                      href="/oad2021#report"
                     >
                       download the report here
                     </Link>
@@ -97,7 +101,7 @@ function About() {
                       onClick={() => {
                         setAboutPageVisible(false);
                       }}
-                      href="#results"
+                      href="/oad2021#results"
                     >
                       click here
                     </Link>{" "}
@@ -162,6 +166,7 @@ function About() {
           </Box>
         </Container>
       </Box>
+      <Footer />
     </>
   );
 }
