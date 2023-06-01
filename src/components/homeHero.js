@@ -1,4 +1,4 @@
-import { Stack, Box, Heading, Text, Container, SimpleGrid, Grid, GridItem, useColorModeValue,} from "@chakra-ui/react";
+import { Stack, Box, Heading, Text, Container, SimpleGrid, Grid, GridItem, useColorModeValue, Img,} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 // import { BsArrowRightCircle } from 'react-icons/bs';
 import { useTranslation } from "react-i18next";
@@ -7,6 +7,7 @@ import hero from "../img/Hero2.jpg"
 import oad22bg from "../img/oad22Tilebg.jpg"
 import oad21bg from "../img/oad21Tilebg.jpg"
 import lbg from "../img/layoutBG.png"
+import oadfeat from "../img/oad22Tilebgi.jpg";
 
 
 function Hero22() {
@@ -51,7 +52,7 @@ function Hero22() {
           <Grid
             templateColumns='repeat(12, 1fr)'
             gap={1}
-            pt={{ base: 4, md: 10, }}
+            // pt={{ base: 4, md: 10, }}
           >
             <GridItem colSpan={{sm:"12", md: "11"}} fontFamily={"OSansM"} >
                 <Box mb={{ base: 8, md: 20 }}>
@@ -76,10 +77,10 @@ function Hero22() {
           <Grid
             templateColumns='repeat(12, 1fr)'
             gap={1}
-            pb={{sm: 15, md: 20,}}
+            pb={{sm: 15, md: 10,}}
           >
             <GridItem colSpan={{sm:"12", md: "4"}} fontFamily={"OSansR"} >
-              <Text fontSize={"22px"} lineHeight={"22px"} >
+              <Text fontSize={"20px"} lineHeight={"22px"} >
               More than
               </Text>
               <Text fontFamily={"OSansB"} fontSize={"82px"} lineHeight={"95px"} >
@@ -89,18 +90,81 @@ function Hero22() {
               <Text as='span' fontWeight={"700"}>rural people</Text> have shared their thoughts, opinions, needs and ideas for a better future since the beginning of On Air Dialogues.
               </Text>
             </GridItem>  
-            <GridItem colStart={6} colEnd={13} fontFamily={"OSansR"} pt={ "30px" }> 
-              <Text fontSize={"22px"} lineHeight={"38px"} >
+            <GridItem colStart={6} colEnd={13} fontFamily={"OSansR"} pt={ "40px" }> 
+              <Text fontSize={"22px"} lineHeight={"34px"} >
                 When farmers’ voices and perspectives are amplified, we can base decisions, policies, and programs on what people really need and want. Learning from farmers’ vast knowledge and experience can bring the world one step closer to ensuring solutions are equitable, sustainable, and productive for all.
               </Text>
             </GridItem>
           </Grid>
+          </Container>
+          </Box>
+
+          
+      <Box bg={`url(${lbg})`} backgroundSize="cover" position={"relative"} id="aboutoad">
+        <Container maxW={"7xl"} zIndex={10} position={"relative"} >
+
+          <Grid
+            templateColumns='repeat(12, 1fr)'
+            gap={10}
+            pb={{ base: 4, md: 10, }}
+          >
+            <GridItem colSpan={{sm:"12", md: "6"}} fontFamily={"OSansM"} >
+
+            <Box>
+                <Img
+                  src={oadfeat}
+                  objectFit="cover"
+                />
+              </Box>
+
+            </GridItem>  
+
+            <GridItem colSpan={{sm:"12", md: "6"}} fontFamily={"OSansM"}>
+            <Box mt={{ base: 8, md: 20 }}>
+                  <Text fontSize={"15px"} fontWeight={"600"} pb={"10px"}  >
+                    01 - About OAD
+                  </Text>
+                  <Heading
+                    mb={5}
+                    fontSize={{ base: "4xl", md: "4xl" }}
+                    fontFamily={"OSansB"} 
+                    letterSpacing={"-1px"} 
+                    lineHeight={{ md: "1.2"}} 
+                    >
+                    What are <Text as='span' color={"#4c9f38"}>On Air Dialogues </Text>
+                  </Heading>
+                    <Stack spacing={3} > 
+                      <Text fontSize={"18px"} lineHeight={"28px"} fontFamily={"OSansR"} >
+                      Working with partners and local radio stations that rural communities know and trust, several original episodes of radio programming are created. Alongside these programs – that interest listeners and create buzz – a mobile-phone based polling system is created using Farm Radio’s Uliza suite of services. 
+                      </Text>
+                      <Text fontSize={"18px"} lineHeight={"28px"} fontFamily={"OSansR"} >
+                      On air, broadcasters invite local experts, farmers and guests to speak and share their knowledge. Off air, listeners join in the conversation by participating in the polling and sharing their own thoughts.  
+                      </Text>
+                    </Stack>
+                </Box>
+            </GridItem> 
+          </Grid>
+
+          <Box mb={{ base: 8, md: 20 }} >
+                    <Stack spacing={3} > 
+                      <Text fontSize={"18px"} lineHeight={"28px"} fontFamily={"OSansR"} >
+                      Each episode of the On Air Dialogues posed a series of questions to listeners. As advertised 
+                      on the radio program, listeners can use any mobile phone to leave a missed call (or “beep”) 
+                      on a number advertised on the radio program. When they end the call, Uliza, Farm Radio’s polling tool, 
+                      returns the call, free of charge. Uliza presents the caller with a series of multiple-choice questions. Callers respond by pressing numbers on the keypad. Uliza also present the caller with an open-ended question. Callers record a voice message in response. Responses to multiple-choice questions are analyzed and disaggregated to shed light on key themes by country, age, and gender. Voice messages are similarly analyzed and documented. 
+                      </Text>
+                    </Stack>
+                </Box>
+
+
+
+
         </Container>
         </Box>
 
 
 
-      <Box bg={`url(${lbg})`} backgroundSize="contain" bgColor={"#f6f6f6"} position={"relative"} py={5}>
+      <Box bg={`url(${lbg})`} backgroundSize="contain" bgColor={"#f6f6f6"} position={"relative"} py={5} id="resultsoad">
         <Container maxW={"7xl"} zIndex={10} position={"relative"} pt={10}>
 
         <Grid
@@ -110,6 +174,9 @@ function Hero22() {
           >
             <GridItem colSpan={{sm:"12", md: "5"}} fontFamily={"OSansM"} >
                 <Box>
+                <Text fontSize={"15px"} fontWeight={"600"} pb={"10px"}  >
+                    02 - Results
+                </Text>
                   <Heading
                     mb={5}
                     fontSize={{ base: "4xl", md: "5xl" }}
@@ -163,7 +230,7 @@ function Hero22() {
                         OAD: Listening to Rural Africans 2022 
                       </Text>
                       <Text  fontSize="6xl" fontFamily={"OSansB"} 
-                      letterSpacing={"-2px"} color={"#4c9f38"} 
+                      letterSpacing={"-3px"} color={"#4c9f38"} 
                       lineHeight={"8xl"} pb={"40px"}>
                         Climate Change
                       </Text>
@@ -217,7 +284,7 @@ function Hero22() {
                         </Text>
                         <Text  
                           fontSize="6xl" fontFamily={"OSansB"} 
-                          letterSpacing={"-2px"} color={"#4c9f38"} 
+                          letterSpacing={"-3px"} color={"#4c9f38"} 
                           lineHeight={"8xl"} pb={"40px"}
                         >
                           Food Systems
@@ -252,63 +319,6 @@ function Hero22() {
           </Stack>
         </Container>
       </Box>
-
-      <Box bg={`url(${lbg})`} backgroundSize="cover" position={"relative"}>
-        <Container maxW={"7xl"} zIndex={10} position={"relative"} py={{sm: 15, md: 20,}}>
-          <Grid
-            templateColumns='repeat(12, 1fr)'
-            gap={1}
-            pt={{ base: 4, md: 10, }}
-          >
-            <GridItem colSpan={{sm:"12", md: "11"}} fontFamily={"OSansM"} >
-                <Box mb={{ base: 8, md: 20 }}>
-                  <Heading
-                    mb={5}
-                    fontSize={{ base: "4xl", md: "5xl" }}
-                    fontFamily={"OSansB"} 
-                    letterSpacing={"-1px"} 
-                    lineHeight={{ md: "1.2"}} 
-                    >
-                    <Text as='span' color={"#4c9f38"}>On Air Dialogues </Text>  
-                    are a Farm Radio International service that combines the power of radio with mobile phones.
-                  </Heading>
-                </Box>
-
-            </GridItem>  
-
-            <GridItem colSpan={{ sm:"12", md:"1"}} fontFamily={"OSansR"} /> 
-          </Grid>
-
-
-          <Grid
-            templateColumns='repeat(12, 1fr)'
-            gap={1}
-            pb={{sm: 15, md: 20,}}
-          >
-            <GridItem colSpan={{sm:"12", md: "4"}} fontFamily={"OSansR"} >
-              <Text fontSize={"22px"} lineHeight={"22px"} >
-              More than
-              </Text>
-              <Text fontFamily={"OSansB"} fontSize={"82px"} lineHeight={"95px"} >
-              17K<Text as='span' color={"#4c9f38"}>+</Text>
-              </Text>
-              <Text fontSize={"18px"} lineHeight={"33px"} fontFamily={"OSansR"} >
-              <Text as='span' fontWeight={"700"}>rural people</Text> have shared their thoughts, opinions, needs and ideas for a better future since the beginning of On Air Dialogues.
-              </Text>
-            </GridItem>  
-            <GridItem colStart={6} colEnd={13} fontFamily={"OSansR"} pt={ "30px" }> 
-              <Text fontSize={"22px"} lineHeight={"38px"} >
-                When farmers’ voices and perspectives are amplified, we can base decisions, policies, and programs on what people really need and want. Learning from farmers’ vast knowledge and experience can bring the world one step closer to ensuring solutions are equitable, sustainable, and productive for all.
-              </Text>
-            </GridItem>
-          </Grid>
-        </Container>
-        </Box>
-
-
-
-
-
 
       <Box
         bg={useColorModeValue("gray.100", "gray.900")}

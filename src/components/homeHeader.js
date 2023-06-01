@@ -47,7 +47,7 @@ function MenuLinks({ isOpen }) {
             setAboutPageVisible(true);
           }}
           color={{ lg: "white", md: "white", sm: "white" }}
-          to={`/oad2022`}
+          to={`#aboutoad`}
         >
           {t("About OAD")}
         </MenuItem>
@@ -56,7 +56,7 @@ function MenuLinks({ isOpen }) {
             setAboutPageVisible(false);
           }}
           color={{ lg: "white", md: "white", sm: "white" }}
-          to={`/oad2022#insights`}
+          to={`#resultsoad`}
         >
           {t("Results")}
         </MenuItem>
@@ -65,7 +65,7 @@ function MenuLinks({ isOpen }) {
             setAboutPageVisible(true);
           }}
           color={{ lg: "white", md: "white", sm: "white" }}
-          to={`/oad2022/about-oad22`}
+          to={`#resultsoad`}
         >
           {t("Projects")}
         </MenuItem>
