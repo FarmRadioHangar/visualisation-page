@@ -40,6 +40,7 @@ function MenuLinks({ isOpen }) {
         direction={["column", "row", "row", "row"]}
         pt={[4, 4, 0, 0]}
         fontWeight={"600"}
+        fontSize={"md"}
       >
         <Spacer display={{ base: "none", sm: "block" }} />
         <MenuItem
@@ -49,7 +50,7 @@ function MenuLinks({ isOpen }) {
           color={{ lg: "white", md: "white", sm: "white" }}
           to={`#aboutoad`}
         >
-          {t("About OAD")}
+          {t("How it works")}
         </MenuItem>
         <MenuItem
           onClick={() => {

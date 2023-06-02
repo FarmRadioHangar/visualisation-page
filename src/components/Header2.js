@@ -178,11 +178,13 @@ function Header2(props) {
     <NavBarContainer {...props}>
       <Box cursor="pointer">
         <Box display={["flex", "flex", "none", "none"]}>
+        <a href="/">
           {'fr' === language ? (
             <Img src={logoFrAlt} w={110} />
           ) : (
             <Img src={logoAlt} w={90} />
           )}
+        </a>
         </Box>
         <Box display={["none", "none", "flex", "flex"]}>
           <a href="/">

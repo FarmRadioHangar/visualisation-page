@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // import { BsArrowRightCircle } from 'react-icons/bs';
 import { useTranslation } from "react-i18next";
 import Header from "./homeHeader";
-import hero from "../img/Hero2.jpg"
+import hero from "../img/Hero3.jpg"
 import oad22bg from "../img/oad22Tilebg.jpg"
 import oad21bg from "../img/oad21Tilebg.jpg"
 import lbg from "../img/layoutBG.png"
@@ -36,7 +36,7 @@ function Hero22() {
                             <Heading mb={2} fontFamily="BebasB" fontSize={"85px"} lineHeight={"90px"} fontWeight={"400"} textTransform={"Uppercase"}>
                             <Text as='span' fontWeight={600}>Rural People</Text>
                             <br/>
-                            Have Much To Say.
+                            Have Plenty To Say.
                             </Heading>
                             <Text fontFamily={"OSansR"} fontSize={"20px"} fontWeight={400} pr={30}>{t("HOME_INTRO")}</Text>
                           
@@ -121,9 +121,6 @@ function Hero22() {
 
             <GridItem colSpan={{sm:"12", md: "6"}} fontFamily={"OSansM"}>
             <Box mt={{ base: 8, md: 20 }}>
-                  <Text fontSize={"15px"} fontWeight={"600"} pb={"10px"}  >
-                    01 - About OAD
-                  </Text>
                   <Heading
                     mb={5}
                     fontSize={{ base: "4xl", md: "4xl" }}
@@ -151,7 +148,7 @@ function Hero22() {
                       Each episode of the On Air Dialogues posed a series of questions to listeners. As advertised 
                       on the radio program, listeners can use any mobile phone to leave a missed call (or “beep”) 
                       on a number advertised on the radio program. When they end the call, Uliza, Farm Radio’s polling tool, 
-                      returns the call, free of charge. Uliza presents the caller with a series of multiple-choice questions. Callers respond by pressing numbers on the keypad. Uliza also present the caller with an open-ended question. Callers record a voice message in response. Responses to multiple-choice questions are analyzed and disaggregated to shed light on key themes by country, age, and gender. Voice messages are similarly analyzed and documented. 
+                      returns the call, free of charge. Uliza presents the caller with a series of multiple-choice questions. Callers respond by pressing numbers on the keypad. Uliza also presents the caller with an open-ended question. Callers record a voice message in response. Responses to multiple-choice questions are analyzed and disaggregated to shed light on key themes by country, age, and gender. Voice messages are similarly analyzed and documented. 
                       </Text>
                     </Stack>
                 </Box>
@@ -174,9 +171,9 @@ function Hero22() {
           >
             <GridItem colSpan={{sm:"12", md: "5"}} fontFamily={"OSansM"} >
                 <Box>
-                <Text fontSize={"15px"} fontWeight={"600"} pb={"10px"}  >
+                {/* <Text fontSize={"15px"} fontWeight={"600"} pb={"10px"}  >
                     02 - Results
-                </Text>
+                </Text> */}
                   <Heading
                     mb={5}
                     fontSize={{ base: "4xl", md: "5xl" }}
@@ -227,7 +224,7 @@ function Hero22() {
                       }}
                     >
                       <Text fontSize="23px" fontFamily={"OSansSB"} letterSpacing={"-1px"} pt={"50px"}>
-                        OAD: Listening to Rural Africans 2022 
+                        Listening to Rural Africans 2022 
                       </Text>
                       <Text  fontSize="6xl" fontFamily={"OSansB"} 
                       letterSpacing={"-3px"} color={"#4c9f38"} 
@@ -280,7 +277,7 @@ function Hero22() {
                       }}
                     >
                         <Text fontSize="23px" fontFamily={"OSansSB"} letterSpacing={"-1px"} pt={"50px"}>
-                          OAD: Listening to Rural Africans 2021 
+                          Listening to Rural Africans 2021 
                         </Text>
                         <Text  
                           fontSize="6xl" fontFamily={"OSansB"} 
@@ -325,7 +322,7 @@ function Hero22() {
         color={useColorModeValue("gray.700", "gray.200")}
       >
       <Container as={Stack} maxW={"7xl"} py={8}>
-        <Text fontSize={14} fontWeight={`600`} pt={0}>© 2023 Farm Radio International | Radios Rurales Internationales, All rights reserved | On Air Dialogues(OAD) </Text>
+        <Text fontSize={14} fontWeight={`600`} pt={0}>© 2023 Farm Radio International | Radios Rurales Internationales, All rights reserved | On Air Dialogues</Text>
       </Container>
     </Box>
     </>
