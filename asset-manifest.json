@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.1e7c75b3.chunk.css",
-    "main.js": "/static/js/main.10602453.chunk.js",
-    "main.js.map": "/static/js/main.10602453.chunk.js.map",
+    "main.js": "/static/js/main.db458e53.chunk.js",
+    "main.js.map": "/static/js/main.db458e53.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.4fd8cce6.js",
     "runtime-main.js.map": "/static/js/runtime-main.4fd8cce6.js.map",
     "static/css/2.6237e11d.chunk.css": "/static/css/2.6237e11d.chunk.css",
@@ -22,7 +22,7 @@
     "static/media/Feature3.93b36335.jpg": "/static/media/Feature3.93b36335.jpg",
     "static/media/Feature4.d9e45011.jpg": "/static/media/Feature4.d9e45011.jpg",
     "static/media/Hero.ef463d8f.jpg": "/static/media/Hero.ef463d8f.jpg",
-    "static/media/Hero2.8baa0a92.jpg": "/static/media/Hero2.8baa0a92.jpg",
+    "static/media/Hero3.df8026bb.jpg": "/static/media/Hero3.df8026bb.jpg",
     "static/media/UNfoodSystemsLogos-300x134-1.44279b1c.png": "/static/media/UNfoodSystemsLogos-300x134-1.44279b1c.png",
     "static/media/africa.5daa12ea.png": "/static/media/africa.5daa12ea.png",
     "static/media/conversation.5e5b5392.png": "/static/media/conversation.5e5b5392.png",
@@ -61,6 +61,6 @@
     "static/css/2.6237e11d.chunk.css",
     "static/js/2.536f478b.chunk.js",
     "static/css/main.1e7c75b3.chunk.css",
-    "static/js/main.10602453.chunk.js"
+    "static/js/main.db458e53.chunk.js"
   ]
 }
