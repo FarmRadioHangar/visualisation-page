@@ -21,6 +21,8 @@ i18n.use(initReactI18next).init({
            "We asked rural people in Burkina Faso and Ethiopia about climate change: how it’s impacting them; what changes they’ve made on their farms; and what governments can do to support the most vulnerable when it comes to adapting to climate change.",
         HERO_INTRO_2:
           "Click on the floating bubbles and icons to listen to their voices.",
+        HERO_INTRO_23:
+        "Two years after our first On Air Dialogue for the 2021 United Nations Food Systems Summit, we checked back in with farmers in Burkina Faso, Ghana, Tanzania and Uganda to see what, if anything, has changed and what their priorities are for 2023 and beyond.",
         HOME_INTRO:
           "As nations, organizations, and individuals, we all must commit to listening and taking action together. On Air Dialogues bring the voices of those least heard — small-scale farming women, men and youth in rural Africa — to the global conversations that impact them.",
         HOME_CAP:
@@ -68,7 +70,46 @@ i18n.use(initReactI18next).init({
           "IFAD is an international financial institution and a United Nations specialized agency based in Rome – the United Nations food and agriculture hub. IFAD invests in rural people, empowering them to reduce poverty, increase food security, improve nutrition and strengthen resilience.",
         ABOUT_P_13i:
           "World Vision Canada is a Christian relief, development and advocacy organization working to create lasting change in the lives of children, families and communities to overcome poverty and injustice.",
-        
+           
+
+        // About page OAD23
+
+        ABOUT_23_1:
+        "In June 2023, Farm Radio International, in partnership with IFAD, asked rural people in Burkina Faso, Ghana, Tanzania and Uganda about food systems, following up on an initial series of questions we had asked ahead of the United Nations Food Systems Summit in 2021.",
+
+        ABOUT_23_2:
+        "The goal: see what, if anything, has changed for farmers, vendors, processors, marketers and their communities when it comes to creating a healthier, more sustainable, productive and equitable food system. Thousands of people responded to the call.",
+
+        ABOUT_23_3:
+        "This research was conducted in collaboration with and with funding from the International Fund for Agricultural Development (IFAD), and additional funding from World Vision Canada, the Canadian Food Security Policy Group and the Canadian Foodgrains Bank.",
+
+        ABOUT_23_4:
+        "In partnership with eight radio stations in Burkina Faso, Ghana, Tanzania, and Uganda to create 28 original episodes of radio programming, complete with mobile phone-based listener polling. In other words, On Air Dialogues. On air, broadcasters invited local experts, farmers, and guests to speak their mind and share their knowledge. Off air, we engaged listeners to join in the discussion with their own thoughts.",
+
+        ABOUT_23_5:
+        "We wanted to know: What would make the biggest impact for farmers? What was threatening their livelihoods and access to healthy food? What changes could governments make to make a bigger difference in their lives. What kind of information and advice do they want? And what message did they want to send to governments and global leaders?",
+
+
+        ABOUT_23_10:
+        "This research was conducted in collaboration with and with funding from the International Fund for Agricultural Development (IFAD), and additional funding from World Vision Canada, the Canadian Food Security Policy Group and the Canadian Foodgrains Bank. Farm Radio International would like to thank all those who made this report possible. We express our deep gratitude to all the farmers and broadcasters who shared their time and information with us.",
+
+        ABOUT_23_11:
+        "Farm Radio International is an international non-governmental organization uniquely focused on improving the lives of rural Africans through the world’s most accessible communications tool, radio, in combination with ICTs.",
+
+        ABOUT_23_12:
+        "IFAD is an international financial institution and a United Nations specialized agency based in Rome – the United Nations food and agriculture hub. IFAD invests in rural people, empowering them to reduce poverty, increase food security, improve nutrition and strengthen resilience.",
+
+        ABOUT_23_13:
+        "World Vision Canada is a Christian relief, development and advocacy organization working to create lasting change in the lives of children, families and communities to overcome poverty and injustice.",
+
+        ABOUT_23_14:
+        "The Canadian Food Security Policy Group is a network of Canadian development and humanitarian organizations with expertise in global food systems, and food security in the Global South.",
+
+        ABOUT_23_15:
+        "Canadian Foodgrains Bank is a partnership of 15 Canadian churches and church-based agencies working together to end global hunger. They work with locally-based organizations in developing countries to meet emergency food needs, achieve long-term solutions to hunger and work to foster informed action by Canadians and governments to support this international cause.",
+
+
+
           // Summary
         SUMMARY_P_1:
           "We asked small-scale farmers to tell us their thoughts and concerns about food systems",
@@ -107,6 +148,31 @@ i18n.use(initReactI18next).init({
           "What can the government do to help farmers like you adapt to these changes?",
         RESULTS_QUESTION_8i:
           "What is the best way to protect or increase the diversity of plants, animals, insects, fish and other forms of life?",
+
+
+
+          SUMMARY_P_23i:
+          "When it comes to food systems, here’s what small-scale farmers told us was on their mind : ",
+        SUMMARY_P_23ii:
+          "In the two years since the 2021 United Nations Food Systems Summit where nations, global leaders and small-scale farmers came together to transform global food systems, the global food system has seen profound shifts.  So we wanted to know what, if anything, has changed since the 2021: Which issues impact farmers most? What are small-scale farmer’s’ outlooks on the last 18 months? And what needs to happen to make life better for farming families?",
+        RESULTS_QUESTION_23_1:
+          "Worldwide, there have been changes in the climate. What kind of changes have you seen in your area since you were a child?",
+        RESULTS_QUESTION_23_2:
+          "What change in the environment has had the biggest impact on your farming?",
+        RESULTS_QUESTION_23_3:
+          "How is farming or livestock keeping now compared to the past?",
+        RESULTS_QUESTION_23_4:
+          "What types of changes have you and your family made on your own farm?",
+        RESULTS_QUESTION_23_5:
+          "Has your community taken action in response to climate change?",
+        RESULTS_QUESTION_23_6:
+          "What is the most important kind of information and advice that farmers need to adapt to changes in the environment?",
+        RESULTS_QUESTION_23_7:
+          "What can the government do to help farmers like you adapt to these changes?",
+        RESULTS_QUESTION_23ß_8:
+          "What is the best way to protect or increase the diversity of plants, animals, insects, fish and other forms of life?",
+
+          
         },
 
     },

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Header from "./homeHeader";
 import hero from "../img/Hero3.jpg"
+import oad23bg from "../img/oad23Tilebg.jpg"
 import oad22bg from "../img/oad22Tilebg.jpg"
 import oad21bg from "../img/oad21Tilebg.jpg"
 import lbg from "../img/layoutBG.png"
@@ -202,6 +203,59 @@ function Hero22() {
                   mt={10}
                   py={30}
                 >
+                  <Link to={`/oad2023`} >  
+                    <Box 
+                      minHeight="680px"
+                      p={20}
+                      pt={40}
+                      border={"1px solid #fffff"}
+                      borderRadius="5px"
+                      bgColor={"#ffffff"}
+                      position={"relative"}
+                      transition={'padding 0.8s ease, background 0.8s ease'}
+                      _hover={{
+                        pt:"52",
+                        bgColor: "transparent",
+                        color:"white",
+                        bg:`linear-gradient(0deg, rgb(0 0 0), rgb(36 36 36 / 7%)),url(${oad23bg})`,
+                        bgPosition:"center",
+                        bgSize:"cover",
+                        bgRepeat:"no-repeat",
+                        
+                      }}
+                    >
+                      <Text fontSize="23px" fontFamily={"OSansSB"} letterSpacing={"-1px"} pt={"50px"}>
+                        Listening to Rural Africans 2023 
+                      </Text>
+                      <Text  fontSize="6xl" fontFamily={"OSansB"} 
+                      letterSpacing={"-3px"} color={"#4c9f38"} 
+                      lineHeight={"8xl"} pb={"40px"}>
+                        Food Systems
+                      </Text>
+                      <Text fontSize="18px">
+                      Two years after our first On Air Dialogue for the 2021 United Nations Food Systems Summit, 
+                      we checked back in with farmers in Burkina Faso, Ghana, Tanzania and Uganda to see what, 
+                      if anything, has changed and what their priorities are for 2023 and beyond.
+                      </Text>
+                      <Text 
+                        fontSize="20px" fontFamily={"OSansM"} 
+                        letterSpacing={"-1px"} color={"#818181"}
+                        position={"absolute"}
+                        bottom={"14"}
+                      >
+                        July 2023
+                      </Text>
+                      {/* <Text 
+                        fontSize="40px" fontFamily={"OSansM"} 
+                        letterSpacing={"-1px"} color={"#818181"}
+                        position={"absolute"}
+                        bottom={"40px"}
+                        right={"80px"}
+                      >
+                      <BsArrowRightCircle color="#818181" />
+                      </Text> */}
+                    </Box>
+                  </Link>
                   <Link to={`/oad2022`} >  
                     <Box 
                       minHeight="680px"
