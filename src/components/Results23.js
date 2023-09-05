@@ -1,7 +1,7 @@
 import "@brainhubeu/react-carousel/lib/style.css";
 import React, { useState, useContext } from "react";
 import MapChart from "./MapChart";
-import { ChatIcon } from "@chakra-ui/icons";
+// import { ChatIcon } from "@chakra-ui/icons";
 import { AiOutlineLineChart } from "react-icons/ai";
 import { VscFilePdf } from "react-icons/vsc";
 import { Doughnut, Pie, Bar } from "react-chartjs-2";
@@ -12,7 +12,7 @@ import {
   Tr,
   Td,
   Tbody,
-  HStack,
+  // HStack,
   Img,
   Button,
   Heading,
@@ -37,19 +37,6 @@ import e3q2 from "../img/OAD2023E3Q2i.png";
 import e3q3 from "../img/OAD2023E3Q3i.png";
 import { Trans, useTranslation } from "react-i18next";
 
-// function getSummary(question) {
-//   const ep1 = getResults("ep1", question);
-//   const ep2 = getResults("ep2", question);
-//   const ep3 = getResults("ep3", question);
-
-//   const getAll = (i) =>
-//     bf.female[i] +
-//     bf.male[i] +
-//     et.female[i] +
-//     et.male[i];
-
-//   return bf.female.map((_, i) => getAll(i));
-// }
 
 function getResults(country, question) {
   switch (question) {
@@ -543,9 +530,9 @@ function Results() {
             <Button
               onClick={() => {
                 if ('fr' === language) {
-                  document.location.href="/On_Air_Dialogues_2022.pdf";
+                  document.location.href="/On_Air_Dialogues_2023.pdf";
                 } else {
-                  document.location.href='/On_Air_Dialogues_2022.pdf';
+                  document.location.href='/On_Air_Dialogues_2023.pdf';
                 }
               }}
               py={8}
@@ -558,25 +545,7 @@ function Results() {
               <VscFilePdf size="33" style={{ marginRight: '8px' }} />
               {t("Download Report")} (PDF)
             </Button>
-            {/* <Button
-              onClick={() => {
-                if ('fr' === language) {
-                  document.location.href="/Dialogues_à_l'antenne_-_À_l'écoute_des_populations_rurales_(points_saillants).pdf";
-                } else {
-                  document.location.href='/On_Air_Dialogues_-_Listening_to_rural_people_(highlights).pdf';
-                }
-              }}
-              py={8}
-              mt={2}
-              mb={5}
-              size="lg"
-              color="white"
-              bg="#01add8"
-              _hover={{ bg: "#008db8" }}
-            >
-              <VscFilePdf size="33" style={{ marginRight: '8px' }} />
-              {t("Download highlights")} (PDF)
-            </Button> */}
+            
           </Box>
         </SimpleGrid>
       </Container>

@@ -84,12 +84,9 @@ function Summary() {
                     my={{ base: 10, md: 0 }}
                   />
                   <Box display="flex" alignItems="center" px={10}>
-                    <Text fontSize="1.4em" color="gray" textAlign="justify">
+                    <Text fontSize="1.4em" lineHeight="1.4em" color="gray" textAlign="justify">
                       <Trans i18nKey="SUMMARY_P_3i">
-                      Despite the impact of climate change felt across the continent, 
-                      <b>94% of callers felt there was something they could do in their own community to cope.</b> 
-                      Migration is the least viable option for farmers in 2023, just as it was in 2021.
-                        
+                      Despite the impact of climate change felt across the continent, <b>94% of callers felt there was something they could do in their own community to cope.</b> Migration is the least viable option for farmers in 2023, just as it was in 2021.
                       </Trans>
                     </Text>
                   </Box>

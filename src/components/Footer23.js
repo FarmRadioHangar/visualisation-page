@@ -64,10 +64,10 @@ function Footer() {
       bg={useColorModeValue("gray.100", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
     >
-      <Container as={Stack} maxW={"7xl"} py={10}>
+      <Container as={Stack} maxW={"7xl"} py={5}>
         <Grid templateColumns={{ sm: "1fr 1fr", md: "3fr 1fr" }} spacing={8}>
-          <GridItem spacing={6} pb={8} colSpan={{ sm: 2, md: 1 }}>
-            <Box mb={10}>
+          <GridItem spacing={6} pb={5} colSpan={{ sm: 2, md: 1 }}>
+            <Box mb={5}>
               <SimpleGrid
                 columns={{ sm: 2, lg: 5 }}
                 spacing="20px"
@@ -107,20 +107,6 @@ function Footer() {
                   </Link>
                 </Box>
                 <Box
-                  maxWidth={500}
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  p={6}
-                >
-                  <Link
-                    isExternal
-                    href="https://www.un.org/en/food-systems-summit"
-                  >
-                    <Img src={logo} />
-                  </Link>
-                </Box>
-                <Box
                   maxWidth={200}
                   display="flex"
                   alignItems="center"
@@ -129,7 +115,21 @@ function Footer() {
                 >
                   <Link
                     isExternal
-                    href="https://www.un.org/en/food-systems-summit"
+                    href="https://foodgrainsbank.ca"
+                  >
+                    <Img src={logo} />
+                  </Link>
+                </Box>
+                <Box
+                  maxWidth={500}
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  p={6}
+                >
+                  <Link
+                    isExternal
+                    href="https://cooperation.ca/canadian-food-security-policy-group"
                   >
                     <Img src={wvLogoFr} />
                   </Link>
