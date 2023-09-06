@@ -84,7 +84,7 @@ i18n.use(initReactI18next).init({
         "This research was conducted in collaboration with and with funding from the International Fund for Agricultural Development (IFAD), and additional funding from World Vision Canada, the Canadian Food Security Policy Group and the Canadian Foodgrains Bank.",
 
         ABOUT_23_4:
-        "In partnership with eight radio stations in Burkina Faso, Ghana, Tanzania, and Uganda to create 28 original episodes of radio programming, complete with mobile phone-based listener polling. In other words, On Air Dialogues. On air, broadcasters invited local experts, farmers, and guests to speak their mind and share their knowledge. Off air, we engaged listeners to join in the discussion with their own thoughts.",
+        "In partnership with eight radio stations in Burkina Faso, Ghana, Tanzania, and Uganda to create 24 original episodes of radio programming, complete with mobile phone-based listener polling. In other words, On Air Dialogues. On air, broadcasters invited local experts, farmers, and guests to speak their mind and share their knowledge. Off air, we engaged listeners to join in the discussion with their own thoughts.",
 
         ABOUT_23_5:
         "We wanted to know: What would make the biggest impact for farmers? What was threatening their livelihoods and access to healthy food? What changes could governments make to make a bigger difference in their lives. What kind of information and advice do they want? And what message did they want to send to governments and global leaders?",

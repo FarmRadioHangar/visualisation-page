@@ -107,20 +107,6 @@ function Footer() {
                   </Link>
                 </Box>
                 <Box
-                  maxWidth={200}
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  p={6}
-                >
-                  <Link
-                    isExternal
-                    href="https://foodgrainsbank.ca"
-                  >
-                    <Img src={logo} />
-                  </Link>
-                </Box>
-                <Box
                   maxWidth={500}
                   display="flex"
                   alignItems="center"
@@ -134,6 +120,21 @@ function Footer() {
                     <Img src={wvLogoFr} />
                   </Link>
                 </Box>
+                <Box
+                  maxWidth={200}
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  p={6}
+                >
+                  <Link
+                    isExternal
+                    href="https://foodgrainsbank.ca"
+                  >
+                    <Img src={logo} />
+                  </Link>
+                </Box>
+                
               </SimpleGrid>
             </Box>
             <Text fontSize={"xs"}>© 2023 All rights reserved</Text>
