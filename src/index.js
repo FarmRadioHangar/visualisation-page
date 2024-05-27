@@ -23,6 +23,9 @@ i18n.use(initReactI18next).init({
           "Click on the floating bubbles and icons to listen to their voices.",
         HERO_INTRO_23:
         "Two years after our first On Air Dialogue for the 2021 United Nations Food Systems Summit, we checked back in with farmers in Burkina Faso, Ghana, Tanzania and Uganda to see what, if anything, has changed and what their priorities are for 2023 and beyond.",
+        HERO_INTRO_24:
+        " In partnership with Global Affairs Canada, national governments, UN Women, FEMNET and national women's rights organizations, we asked thousands of women, men and youth about their understanding of unpaid care work, the social norms surrounding it and the necessary steps for effecting change.",
+        
         HOME_INTRO:
           "As nations, organizations, and individuals, we all must commit to listening and taking action together. On Air Dialogues bring the voices of those least heard — small-scale farming women, men and youth in rural Africa — to the global conversations that impact them.",
         HOME_CAP:
@@ -109,6 +112,40 @@ i18n.use(initReactI18next).init({
         "Canadian Foodgrains Bank is a partnership of 15 Canadian churches and church-based agencies working together to end global hunger. They work with locally-based organizations in developing countries to meet emergency food needs, achieve long-term solutions to hunger and work to foster informed action by Canadians and governments to support this international cause.",
 
 
+        
+         // About page OAD24
+
+         ABOUT_24_1:
+         "In February to April 2024, Farm Radio International, with funding from Global Affairs Canada, asked people in Burkina Faso, Ethiopia, Malawi, Nigeria and Tanzania about their experiences with and perspectives on unpaid care work.",
+ 
+         ABOUT_24_2:
+         "We sought to gain insight into their understanding of unpaid care work, explore the social norms surrounding it and understand the necessary steps for effecting change. Overall, we heard from thousands of adult women, men and youth about this important, but under-discussed, topic.",
+ 
+         ABOUT_24_3:
+         "The On Air Dialogues were funded by Global Affairs Canada and implemented with the support of strategic partnerships with FEMNET, UN Women, and key national women’s rights organizations and stakeholders.",
+ 
+         ABOUT_24_4:
+         "In partnership with 16 radio stations in Burkina Faso, Ethiopia, Malawi, Nigeria and Tanzania, we created 48 original episodes of radio programming, complete with mobile phone-based listener polling. In other words, On Air Dialogues. On air, broadcasters invited local experts, community members and guests to speak their minds and share their knowledge. Off air, we engaged listeners to join in the discussion with their own thoughts.",
+ 
+         ABOUT_24_5:
+         "We wanted to know: How much of their day do they dedicate to unpaid care work? Is unpaid care and domestic work recognized and appreciated in their society? What needs to change at a household level to make unpaid care work easier, particularly for women? And what actions should governments take to support unpaid care workers?",
+ 
+ 
+         ABOUT_24_9:
+         "This research was conducted by Farm Radio International, thanks to funding from Global Affairs Canada.",
+         
+         ABOUT_24_10:
+         "We’d like to thank the 16 radio stations in Burkina Faso, Ethiopia, Malawi, Nigeria and Tanzania, who helped gather nearly 96,000 responses from women, men and youth across different communities. The engagement was made possible through On Air Dialogues, combining radio programs with mobile phone-based polling, amplifying rural voices, and promoting inclusive and accessible communication platforms. We also express our deep gratitude to UN Women, FEMNET, and all the different national government ministries, national women rights organizations, and people who shared their time and information with us.",
+ 
+         ABOUT_24_11:
+         "Farm Radio International is a Canadian international non-governmental organization uniquely focused on improving the lives of rural Africans through the world’s most accessible communications tool, radio, in combination with Information and Communications Technologies (ICTs).",
+         
+         ABOUT_24_12:
+         "Global Affairs Canada (GAC) is responsible for Canada’s foreign policy and all matters relating to Canada’s external affairs, including international trade and commerce, and international development.",
+         
+      
+
+
 
           // Summary
         SUMMARY_P_1:
@@ -151,10 +188,15 @@ i18n.use(initReactI18next).init({
 
 
 
-          SUMMARY_P_23i:
+        SUMMARY_P_23i:
           "When it comes to food systems, here’s what small-scale farmers told us was on their mind : ",
         SUMMARY_P_23ii:
           "In the two years since the 2021 United Nations Food Systems Summit where nations, global leaders and small-scale farmers came together to transform global food systems, the global food system has seen profound shifts.  So we wanted to know what, if anything, has changed since the 2021: Which issues impact farmers most? What are small-scale farmer’s’ outlooks on the last 18 months? And what needs to happen to make life better for farming families?",
+        SUMMARY_P_24i:
+          "WHAT WE LEARNED",
+        SUMMARY_P_24ii:
+          "Using mobile phone-based polling in combination with radio programs, we asked women and men in Burkina Faso, Ethiopia, Malawi, Nigeria and Tanzania to tell us their experiences and opinions about unpaid care work, and what changes they would like to see related to unpaid care. Here’s what they had to say:",
+        
         RESULTS_QUESTION_23_1:
           "Worldwide, there have been changes in the climate. What kind of changes have you seen in your area since you were a child?",
         RESULTS_QUESTION_23_2:

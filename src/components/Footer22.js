@@ -25,7 +25,7 @@ function Footer() {
     >
       <Container as={Stack} maxW={"6xl"} py={10}>
               <SimpleGrid
-                columns={{ sm: 2, lg: 3 }}
+                columns={{ sm: 2, md: 3 }}
                 spacing="0px"
                 // mr={[0, null, 10]}
                 alignItems={"center"}
@@ -33,13 +33,13 @@ function Footer() {
                 <Box>
 
                   <SimpleGrid
-                    columns={{ sm: 1, lg: 2 }}
+                    columns={{ base: 3, lg: 2 }}
                     spacing="10px"
                     mr={[0, null, 10]}
                     alignItems={"center"}
                   >
                     <Box
-                      maxWidth={100}
+                      maxWidth= {{base: 70, md: 100}}
                       // display="flex"
                       alignItems="left"
                       justifyContent="left"

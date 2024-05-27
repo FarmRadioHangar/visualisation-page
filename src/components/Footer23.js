@@ -64,14 +64,12 @@ function Footer() {
       bg={useColorModeValue("gray.100", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
     >
-      <Container as={Stack} maxW={"7xl"} py={5}>
-        <Grid templateColumns={{ sm: "1fr 1fr", md: "3fr 1fr" }} spacing={8}>
-          <GridItem spacing={6} pb={5} colSpan={{ sm: 2, md: 1 }}>
-            <Box mb={5}>
+      <Container as={Stack} maxW={"6xl"} py={5}>
+        <Grid templateColumns={{ sm: "1fr 1fr", md: "3fr" }} spacing={8}>
+        <GridItem >
+            <Box>
               <SimpleGrid
-                columns={{ sm: 2, lg: 5 }}
-                spacing="20px"
-                mr={[0, null, 10]}
+                columns={{ base: 2, lg: 5 }}
               >
                 <Box
                   maxWidth={200}
@@ -85,7 +83,7 @@ function Footer() {
                   </Link>
                 </Box>
                 <Box
-                  maxWidth={500}
+                  maxWidth={200}
                   display="flex"
                   alignItems="center"
                   justifyContent="center"

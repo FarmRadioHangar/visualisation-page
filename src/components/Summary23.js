@@ -83,14 +83,25 @@ function Summary() {
                     borderRadius="5px"
                     my={{ base: 10, md: 0 }}
                   />
-                  <Box display="flex" alignItems="center" px={10}>
+                  <Box display="flex" alignItems="center" px={{base: 5, md: 5}}>
                     <Text fontSize="1.4em" lineHeight="1.4em" color="gray" textAlign="justify">
                       <Trans i18nKey="SUMMARY_P_3i">
                       Despite the impact of climate change felt across the continent, <b>94% of callers felt there was something they could do in their own community to cope.</b> Migration is the least viable option for farmers in 2023, just as it was in 2021.
                       </Trans>
                     </Text>
                   </Box>
-                  <Box display="flex" alignItems="center" px={10}>
+                
+                  <Box
+                    bg={`url(${photo1})`}
+                    display={{md: "none"}}
+                    backgroundSize="cover"
+                    backgroundPosition="center center"
+                    minHeight="550px"
+                    borderRadius="5px"
+                    my={{ base: 10, md: 0 }}
+                  />
+
+                  <Box display="flex" alignItems="center" px={{base: 5, md: 5}}>
                     <Text fontSize="1.4em" color="gray" textAlign="justify">
                       <Trans i18nKey="SUMMARY_P_4">
                       There’s good news! <b>More farmers are saying they are not worried about 
@@ -104,6 +115,7 @@ function Summary() {
                   </Box>
                   <Box
                     bg={`url(${photo1})`}
+                    display={{base: "none", md: "block"}}
                     backgroundSize="cover"
                     backgroundPosition="center center"
                     minHeight="550px"
@@ -118,7 +130,7 @@ function Summary() {
                     borderRadius="5px"
                     my={{ base: 10, md: 0 }}
                   />
-                  <Box display="flex" alignItems="center" px={5}>
+                  <Box display="flex" alignItems="center" px={{base: 5, md: 5}}>
                     <Text fontSize="1.4em" color="gray" textAlign="justify">
                       <Trans i18nKey="SUMMARY_P_5">
                         In 2021, loans or credit were the top priority for farmers to

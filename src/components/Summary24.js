@@ -8,9 +8,9 @@ import {
   Tag,
   Stack,
 } from "@chakra-ui/react";
-import photo1 from "../img/Feature1.jpg";
-import photo2 from "../img/Feature2.jpg";
-import photo4 from "../img/Feature3.jpg";
+import photo1 from "../img/OAD24Feature2.jpg";
+import photo2 from "../img/OAD24Feature6.jpg";
+import photo4 from "../img/OAD24Feature7.jpg";
 import lbg from "../img/layoutBG.png"
 import { AppContext } from "../contexts/App";
 import { Trans, useTranslation } from "react-i18next";
@@ -62,10 +62,10 @@ function Summary() {
                   fontSize={{ base: "4xl", md: "5xl" }}
                   fontFamily="BebasR" textTransform={"uppercase"}
                 >
-                  {t("SUMMARY_P_1i")}
+                  {t("SUMMARY_P_24i")}
                 </Heading>
                 <Text fontSize={"xl"} >
-                  {t("SUMMARY_P_2i")}
+                  {t("SUMMARY_P_24ii")}
                 </Text>
 
 
@@ -76,7 +76,7 @@ function Summary() {
                   py={30}
                 >
                   <Box
-                    bg={`url(${photo2})`}
+                    bg={`url(${photo1})`}
                     backgroundSize="cover"
                     backgroundPosition="center center"
                     minHeight="550px"
@@ -86,22 +86,19 @@ function Summary() {
                   <Box display="flex" alignItems="center" px={{base: 5, md: 5}}>
                     <Text fontSize="1.4em" color="gray" textAlign="justify">
                       <Trans i18nKey="SUMMARY_P_3i">
-                      Communities in Burkina Faso and Ethiopia told us 
-                      over and over again that climate change was harming 
-                      their communities. <b>Almost 90% of respondents identified 
-                      changes due to climate change</b> in at least one of these areas: 
-                      the timing and duration of rainy seasons, the volume of rainfall, 
-                      the frequency of flooding, average temperatures and the type and quantity 
-                      of food available since their youth. What struck us was this: the majority 
-                      of respondents told us that farming and raising livestock is more difficult 
-                      today than it was in the past.
-                        
+                      <b>Women generally spend more time on unpaid care work 
+                        compared to men,</b> although there are variations across 
+                        countries. For example, in the first On Air Dialogue episode, 
+                        women in Ethiopia were more likely to tell us that they spend 
+                        most of their day on unpaid care work, while men reported spending 
+                        only a small part of their day on these activities. Nigeria and Tanzania, 
+                        meanwhile, showed a more balanced distribution between genders.
                       </Trans>
                     </Text>
                   </Box>
 
                   <Box
-                    bg={`url(${photo1})`}
+                    bg={`url(${photo2})`}
                     display={{md: "none"}}
                     backgroundSize="cover"
                     backgroundPosition="center center"
@@ -113,16 +110,17 @@ function Summary() {
                   <Box display="flex" alignItems="center" px={{base: 5, md: 5}}>
                     <Text fontSize="1.4em" color="gray" textAlign="justify">
                       <Trans i18nKey="SUMMARY_P_4">
-                      It’s clear that climate change is affecting rural farmers
-                       — but rural farmers haven’t given up. <b>More than 90% of respondents told us they are taking 
-                        steps to mitigate the impact in their communities and on their livelihoods.</b> 
-                        They are planting native plants and trees, adopting methods to find and preserve water, 
-                        taking steps to prevent natural disasters, and working together to improve farming for everyone. 
+                      Across most countries, <b>both men and women acknowledge the need 
+                      for a more equal sharing of household work between genders.</b> This 
+                      sentiment is particularly strong in Ethiopia, Malawi and Tanzania. 
+                      A significant percentage in each country believes that the work 
+                      should be made easier for women to manage, suggesting an awareness 
+                      of the challenges women face in household responsibilities. 
                       </Trans>
                     </Text>
                   </Box>
                   <Box
-                    bg={`url(${photo1})`}
+                    bg={`url(${photo2})`}
                     display={{base: "none", md: "block"}}
                     backgroundSize="cover"
                     backgroundPosition="center center"
@@ -141,15 +139,13 @@ function Summary() {
                   <Box display="flex" alignItems="center" px={{base: 5, md: 5}}>
                     <Text fontSize="1.4em" color="gray" textAlign="justify">
                       <Trans i18nKey="SUMMARY_P_5">
-                        Remarkably, <b>96% of participants in both countries agreed that it was important 
-                        to take action to protect biodiversity.</b> 
-                        Rural farmers in both countries believe that the most effective 
-                        approach to increase biodiversity is to promote and support more 
-                        nature-friendly farming and livestock practices and to enable farmers 
-                        to earn income by protecting and restoring biodiversity. But they want 
-                        their governments to assist them in climate-change adaptation. Highest 
-                        on their priority list? The improvement of water supply through irrigation 
-                        and support for protecting nature and planting native trees.
+                      <b>The top priority for governments</b> to make care work 
+                        easier for women varies. In Nigeria and Tanzania, improving 
+                        safety and security, especially for women and girls, is seen 
+                        as a significant priority. Malawi prioritizes making more health 
+                        care services available, and Burkina Faso making more childcare 
+                        centres available. Ethiopia emphasizes both childcare centres 
+                        and health care services.
                       </Trans>
                     </Text>
                   </Box>

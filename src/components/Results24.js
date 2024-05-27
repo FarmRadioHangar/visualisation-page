@@ -1,7 +1,7 @@
 import "@brainhubeu/react-carousel/lib/style.css";
 import React, { useState, useContext } from "react";
 import MapChart from "./MapChart";
-// import { ChatIcon } from "@chakra-ui/icons";
+import { ChatIcon } from "@chakra-ui/icons";
 import { AiOutlineLineChart } from "react-icons/ai";
 import { VscFilePdf } from "react-icons/vsc";
 import { Doughnut, Pie, Bar } from "react-chartjs-2";
@@ -12,7 +12,7 @@ import {
   Tr,
   Td,
   Tbody,
-  // HStack,
+  HStack,
   Img,
   Button,
   Heading,
@@ -26,17 +26,18 @@ import {
 import { AppContext } from "../contexts/App";
 import { RiBook2Line } from "react-icons/ri";
 import illustration from "../img/illustration.png";
-import e1q1 from "../img/OAD23/OAD2023E1Q1i.png";
-import e1q2 from "../img/OAD23/OAD2023E1Q2i.png";
-import e1q3 from "../img/OAD23/OAD2023E1Q3i.png";
-import e2q1 from "../img/OAD23/OAD2023E2Q1i.png";
-import e2q2 from "../img/OAD23/OAD2023E2Q2i.png";
-import e2q3 from "../img/OAD23/OAD2023E2Q3i.png";
-import e3q1 from "../img/OAD23/OAD2023E3Q1i.png";
-import e3q2 from "../img/OAD23/OAD2023E3Q2i.png";
-import e3q3 from "../img/OAD23/OAD2023E3Q3i.png";
+import e1q1 from "../img/OAD24/OAD24E1Q1.png"
+import e1q2 from "../img/OAD24/OAD24E1Q2.png";
+import e1q3 from "../img/OAD24/OAD24E1Q3.png";
+import e1q4 from "../img/OAD24/OAD24E1Q4.png";
+import e2q1 from "../img/OAD24/OAD24E2Q1.png";
+import e2q2 from "../img/OAD24/OAD24E2Q2.png";
+import e2q3 from "../img/OAD24/OAD24E2Q3.png";
+import e2q4 from "../img/OAD24/OAD24E2Q4.png";
+import e3q1 from "../img/OAD24/OAD24E3Q1.png";
+import e3q2 from "../img/OAD24/OAD24E3Q2.png";
+import e3q3 from "../img/OAD24/OAD24E3Q3.png";
 import { Trans, useTranslation } from "react-i18next";
-
 
 function getResults(country, question) {
   switch (question) {
@@ -44,21 +45,21 @@ function getResults(country, question) {
       switch (country) {
         case "ep1":
           return {
-            quest: ["WHICH OF THE FOLLOWING ARE YOU MOST WORRIED ABOUT, IF YOU THINK ABOUT THE SAFETY AND QUALITY OF THE FOOD YOUR FAMILY EATS? "],
+            quest: ["HOW MUCH OF YOUR DAY GOES TOWARD DOING UNPAID ACTIVITIES TO ENSURE THE CARE AND SAFETY OF YOUR FAMILY?"],
             stat: [e1q1],
-            cap: ["Responses to safety and quality of food by country"],
+            cap: ["Responses to amount of time spent on unpaid care activities"],
           };
         case "ep2":
           return {
-            quest: ["WHICH OF THE FOLLOWING FIVE OPTIONS WOULD GIVE YOU THE MOST SUCCESS AS A FARMER?"],
+            quest: ["HOW MUCH OF YOUR DAY GOES TOWARD DOING UNPAID ACTIVITIES TO ENSURE THE CARE AND SAFETY OF YOUR FAMILY?"],
             stat: [e2q1],
-            cap: ["Which of the following five options would give you the most success as a farmer by country?"],
+            cap: ["Responses to the amount of time spent on unpaid care activities by gender"],
           };
         case "ep3":
           return {
-            quest: ["WHERE WOULD YOU TURN TO FOR INFORMATION TO HELP YOU COPE WITH FUTURE THREATS TO YOUR FAMILY AND LIVELIHOOD?"],
+            quest: ["HOW MUCH OF YOUR DAY GOES TOWARD DOING UNPAID ACTIVITIES TO ENSURE THE CARE AND SAFETY OF YOUR FAMILY?"],
             stat: [e3q1],
-            cap: ["Where would you turn to for information to help you cope with future threats to your family and livelihood by country?"],
+            cap: ["Responses to amount of time spent on unpaid care activities"],
           };  
         default:
           return {};
@@ -67,21 +68,21 @@ function getResults(country, question) {
       switch (country) {
         case "ep1":
           return {
-           quest: ["WHEN FOOD IS SCARCE, WHAT IS THE FIRST THING YOUR FAMILY DOES TO COPE?"],
+           quest: ["WHICH OF THESE DO YOU THINK IS CATEGORIZED AS UNPAID CARE WORK?"],
            stat: [e1q2],
-           cap: ["When food is scarce, what is the first thing your family does to cope by country?"],
+           cap: ["Which of these do you think is categorized as unpaid care work?"],
           };
           case "ep2":
           return {
-            quest: ["WHAT WILL FARMING LOOK LIKE IN THE FUTURE FOR TODAY’S CHILDREN?"],
+            quest: ["WHO, IN YOUR VIEW, SHOULD BE RESPONSIBLE FOR DOING UNPAID  CARE TASKS AND DOMESTIC WORK AT HOME?"],
             stat: [e2q2],
-            cap: ["What will farming look like in the future for today’s children by country?"],
+            cap: ["Response to who is responsible for unpaid care tasks by gender"],
           };
           case "ep3":
           return {
-            quest: ["CLIMATE CHANGE CAN HAVE A BIG EFFECT ON FARMING. WHICH OF THE FOLLOWING WOULD HELP YOU, AS A FARMER TO BEST DEAL WITH CHANGES IN THE WEATHER?"],
+            quest: ["WHAT WOULD YOU CHANGE IN YOUR HOUSEHOLD, IF ANYTHING, TO MAKE THE WORK OF CARING FOR YOUR FAMILY EASIER AND MORE MANAGEABLE FOR WOMEN?"],
             stat: [e3q2],
-            cap: ["Climate change can have a big effect on farming. Which of the following would help you as a farmer to best deal with changes in the weather?"],
+            cap: ["Responses to what changes in the household would make unpaid care easier by gender"],
           };
         default:
           return {};
@@ -90,27 +91,46 @@ function getResults(country, question) {
         switch (country) {
           case "ep1":
           return {
-            quest: ["OVER THE PAST 18 MONTHS, HAS THE AFFORDABILITY OF QUALITY FOOD IN YOUR COMMUNITY"],
+            quest: ["THINK ABOUT THE AMOUNT OF WORK THAT IS INVOLVED FOR YOU IN CARING FOR THE NEEDS OF YOUR FAMILY AT HOME. IT IS:"],
             stat: [e1q3],
-            cap: ["Over the past 18 months, has the affordability of quality food in your community by country?"],
+            cap: ["Responses to the amount of unpaid care work done at home by gender"],
           };
           case "ep2":
           return {
-            quest: ["WHICH OF THE FOLLOWING FIVE OPTIONS WOULD GIVE YOU THE MOST SUCCESS AS A FARMER?"],
+            quest: ["IN YOUR COMMUNITY, WHO AMONG THE FOLLOWING IS DOING MOST OF THE UNPAID CARE TASKS AND DOMESTIC WORK AT HOME?"],
             stat: [e2q3],
-            cap: ["Over the past 18 months, has the availability of quality jobs in your community by country"],
+            cap: ["Response to who does most unpaid care tasks at home by age"],
           };
           case "ep3":
           return {
-            quest: ["OVER THE PAST 18 MONTHS, HAS YOUR ABILITY TO GET THE INPUTS YOU NEED TO SUPPORT YOUR FARMING AND OTHER PRODUCTIVE ACTIVITIES"],
+            quest: ["WHICH OF THE FOLLOWING ACTIONS SHOULD BE A TOP PRIORITY FOR GOVERNMENTS TO MAKE CARE WORK EASIER, ESPECIALLY FOR WOMEN?"],
             stat: [e3q3],
-            cap: ["Over the past 18 months, has your ability to get the inputs you need to support your farming and other productive activities by country"],
+            cap: ["Response to top priority for governments to make unpaid care easier for women"],
           };
           default:
             return {};
-        }  
+        }
+        case "4":
+        switch (country) {
+          case "ep1":
+          return {
+            quest: ["DOES YOUR SOCIETY RECOGNIZE AND APPRECIATE UNPAID DOMESTIC AND CARING WORK?"],
+            stat: [e1q4],
+            cap: ["Responses to recognition and appreciation of unpaid care"],
+          };
+          case "ep2":
+          return {
+            quest: ["IN YOUR COMMUNITY, HOW ARE FAMILIES PERCEIVED WHEN MEN AND WOMEN SHARE THE UNPAID CARE TASKS AND DOMESTIC WORK AT HOME?"],
+            stat: [e2q4],
+            cap: ["Response to perception of families when unpaid care work is shared"],
+          };
+
+          default:
+            return {};
+        }    
     default:
       return [];
+    
   }
 }
 
@@ -382,11 +402,11 @@ function Results() {
   const getCountryName = (code) => {
     switch (code) {
       case "ep1":
-        return t("EPISODE 1 (Ensuring Access To Safe & Nutritious Food For All)");
+        return t("EPISODE 1 (Introduction To Unpaid Care)");
       case "ep2":
-        return t("EPISODE 2 (Advancing Equitable Livelihoods)");
+        return t("EPISODE 2 (Social Norms Related To Unpaid Care Work)");
       case "ep3":
-        return t("EPISODE 3 (Building Resilience To Vulnerabilities, Shocks & Stress)");
+        return t("EPISODE 3 (Making Change)");
       default:
         return "";
     }
@@ -409,11 +429,11 @@ function Results() {
           <Box>
             <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"left"}>
               <Heading fontSize={"4xl"} color="white">
-                {t("What rural people think about climate change")}
+                {t("What rural people think about unpaid care")}
               </Heading>
               <Text color={"white"} fontSize={"2xl"}>
                 {t(
-                  "Click on the dropdown menu below to explore the responses of farmers for each episode."
+                  "Click on the dropdown menu below to explore the responses of listeners for each episode."
                 )}
               </Text>
               <Box>
@@ -483,6 +503,9 @@ function Results() {
                   <QuestionCard
                     question={3} 
                   />
+                  <QuestionCard
+                    question={4} 
+                  />
                   
                 </VStack>
 
@@ -530,9 +553,9 @@ function Results() {
             <Button
               onClick={() => {
                 if ('fr' === language) {
-                  document.location.href="/On_Air_Dialogues_2023.pdf";
+                  document.location.href="/On_Air_Dialogues_2024.pdf";
                 } else {
-                  document.location.href='/On_Air_Dialogues_2023.pdf';
+                  document.location.href='/On_Air_Dialogues_2024.pdf';
                 }
               }}
               py={8}
@@ -554,3 +577,4 @@ function Results() {
 }
 
 export default Results;
+

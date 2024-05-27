@@ -1,17 +1,15 @@
 import React, { useState, useRef } from "react";
 import ReactAudioPlayer from "react-audio-player";
 import Spinner from "react-spinkit";
-import resultsBf from "../data/bf22.json";
-import resultsEt from "../data/et22.json"; 
-import Header from "./Header22";
+import resultsBf from "../data/bf24.json";
+import Header from "./Header24";
 import { BiPlay, BiPause } from "react-icons/bi";
 import { Link, VStack, IconButton, Box, Heading, Text, Container, SimpleGrid, Button } from "@chakra-ui/react";
 import { Trans, useTranslation } from "react-i18next";
-import hero from "../img/Hero.jpg"
-import herosm from "../img/oad22Tilebg.jpg"
+import hero from "../img/OAD24Hero1.jpg"
 import lbg from "../img/layoutBG.png"
 
-function Hero22() {
+function Hero() {
   const [overlayExpanded, setOverlayExpanded] = useState(true);
   const [audioSrc, setAudioSrc] = useState();
   const [responseInfo, setResponseInfo] = useState();
@@ -30,10 +28,8 @@ function Hero22() {
     const getResultsSet = () => {
       switch (Math.floor(2 * Math.random())) {
         case 0:
+        default:  
           return resultsBf;
-        case 1:
-        default:
-          return resultsEt;
       }
     };
 
@@ -44,7 +40,7 @@ function Hero22() {
 
     const response = getResponse();
 
-    setAudioSrc(`${process.env.PUBLIC_URL}/audio22/${response.ID}.wav`);
+    setAudioSrc(`${process.env.PUBLIC_URL}/audio24/${response.ID}.wav`);
 
     setResponseInfo({
       transcription_en: response["Transcription (ENG)"],
@@ -119,9 +115,9 @@ function Hero22() {
 
 
                 <Box
-                  bg={{base: `linear-gradient(0deg, rgb(0 0 0 / 89%), rgb(36 36 36 / 31%)),url(${herosm})`, md: `linear-gradient(0deg, rgb(0 0 0 / 89%), rgb(36 36 36 / 31%)),url(${hero})`}}
-                  backgroundSize={{base: "cover", md:"cover"}}
-                  backgroundPosition={{base: "center top", md:"center top"}}
+                  bg={`linear-gradient(0deg, rgb(0 0 0 / 89%), rgb(36 36 36 / 31%)),url(${hero})`}
+                  backgroundSize="cover"
+                  backgroundPosition={{base: "center bottom", md:"bottom top"}}
                   color={"white"}
                   verticalAlign="center"
                   minHeight={{base: "700px", md:"800px"}}
@@ -135,9 +131,9 @@ function Hero22() {
                     
                     <Box mt={{base:"200px", md:"0px"}} >
                       <Heading mb={2} width={{base: "80%", md: "100%" }}fontFamily="BebasB" fontSize={{base: "55px", md:"85px"}} lineHeight={{base: "60px", md:"90px"}} fontWeight={"400"} textTransform={"Uppercase"}>
-                        {t("Listening to Rural People 2022")}
+                        {t("Listening to Rural People 2024")}
                       </Heading>
-                      <Text fontFamily={"heading"} fontSize={"md"} fontWeight={{base: 400, md: 300}} mb={3}>{t("HERO_INTRO_1i")}</Text>
+                      <Text fontFamily={"heading"} fontSize={"md"} fontWeight={{base: 400, md: 300}} mb={3}>{t("HERO_INTRO_24")}</Text>
                       <Button
                           onClick={handleClick}
                           px={8}
@@ -272,8 +268,6 @@ function Hero22() {
                 </Box>
 
                 <Box
-                  // bg={useColorModeValue("gray.100", "gray.900")}
-                  // color={useColorModeValue("gray.700", "gray.200")}
                   bg={`url(${lbg})`} backgroundSize="contain"
                   mt={{base: "0px", md:"-75px"}}
                   color="white"
@@ -284,37 +278,37 @@ function Hero22() {
 
                   <SimpleGrid columns={{base: 2, md: 6}} spacingY='50px' minHeight='90px' py={{ base: "10", md: "5"}}>
                     <Box  borderRight="1px solid #fff" textAlign="center" > 
-                        <Text fontSize={"60px"} lineHeight={"70px"} fontWeight={"600"} letterSpacing={1} mb={2}>2</Text>
+                        <Text fontSize={"60px"} lineHeight={"70px"} fontWeight={"600"} letterSpacing={1} mb={2}>5</Text>
                         <Trans i18nKey="SUMMARY_P_6">
                         <Text fontSize={"25px"} lineHeight={"30px"}>Countries</Text>
                         </Trans>
                     </Box>
                     <Box borderRight={{ base: "0px", md: "1px solid #fff"}}  textAlign="center" >
-                        <Text fontSize={"60px"} lineHeight={"70px"} fontWeight={"600"} letterSpacing={1} mb={2}>7</Text>
+                        <Text fontSize={"60px"} lineHeight={"70px"} fontWeight={"600"} letterSpacing={1} mb={2}>16</Text>
                         <Trans i18nKey="SUMMARY_P_6">
                         <Text fontSize={"25px"} lineHeight={"30px"}>Radio Stations</Text>
                         </Trans>
                     </Box>
                     <Box borderRight="1px solid #fff"  textAlign="center" >
-                        <Text fontSize={"60px"} lineHeight={"70px"} fontWeight={"600"} letterSpacing={1} mb={2}>21</Text>
+                        <Text fontSize={"60px"} lineHeight={"70px"} fontWeight={"600"} letterSpacing={1} mb={2}>48</Text>
                         <Trans i18nKey="SUMMARY_P_6">
                         <Text fontSize={"25px"} lineHeight={"30px"}>Original Episodes</Text>
                         </Trans>
                     </Box>
                     <Box borderRight={{ base: "0px", md: "1px solid #fff"}}  textAlign="center" >
-                        <Text fontSize={"60px"} lineHeight={"70px"} fontWeight={"600"} letterSpacing={1} mb={2}>14,356</Text>
+                        <Text fontSize={"60px"} lineHeight={"70px"} fontWeight={"600"} letterSpacing={1} mb={2}>20,355</Text>
                         <Trans i18nKey="SUMMARY_P_6">
                         <Text fontSize={"25px"} lineHeight={"30px"}>Respondents</Text>
                         </Trans>
                     </Box>
                     <Box borderRight="1px solid #fff"  textAlign="center" >
-                        <Text fontSize={"60px"} lineHeight={"70px"} fontWeight={"600"} letterSpacing={1} mb={2}>122,529</Text>
+                        <Text fontSize={"60px"} lineHeight={"70px"} fontWeight={"600"} letterSpacing={1} mb={2}>95,951</Text>
                         <Trans i18nKey="SUMMARY_P_6">
                         <Text fontSize={"25px"} lineHeight={"30px"}>Poll Responses</Text>
                         </Trans>
                     </Box>
                     <Box textAlign="center" >
-                        <Text fontSize={"60px"} lineHeight={"70px"} fontWeight={"600"} letterSpacing={1} mb={2}>9,317</Text>
+                        <Text fontSize={"60px"} lineHeight={"70px"} fontWeight={"600"} letterSpacing={1} mb={2}>13,937</Text>
                         <Trans i18nKey="SUMMARY_P_6">
                         <Text fontSize={"25px"} lineHeight={"30px"}>Audio Comments</Text>
                         </Trans>
@@ -328,4 +322,4 @@ function Hero22() {
   );
 }
 
-export default Hero22;
+export default Hero;

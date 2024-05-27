@@ -2,12 +2,12 @@ import React, { useState, useRef } from "react";
 import ReactAudioPlayer from "react-audio-player";
 import Spinner from "react-spinkit";
 import resultsBf from "../data/bf23.json";
-// import resultsEt from "../data/et22.json"; 
 import Header from "./Header23";
 import { BiPlay, BiPause } from "react-icons/bi";
 import { Link, VStack, IconButton, Box, Heading, Text, Container, SimpleGrid, Button } from "@chakra-ui/react";
 import { Trans, useTranslation } from "react-i18next";
 import hero from "../img/Hero23i.jpg"
+import herosm from "../img/oad23Tilebg.jpg"
 import lbg from "../img/layoutBG.png"
 
 function Hero22() {
@@ -117,25 +117,26 @@ function Hero22() {
 
 
                 <Box
-                  bg={`linear-gradient(0deg, rgb(0 0 0 / 89%), rgb(36 36 36 / 31%)),url(${hero})`}
-                  backgroundSize="cover"
-                  backgroundPosition="center top"
+                  bg={{base: `linear-gradient(0deg, rgb(0 0 0 / 89%), rgb(36 36 36 / 31%)),url(${herosm})`, md: `linear-gradient(0deg, rgb(0 0 0 / 89%), rgb(36 36 36 / 31%)),url(${hero})`}}
+                  backgroundSize={{base: "cover", md:"cover"}}
+                  backgroundPosition={{base: "center top", md:"bottom top"}}
                   color={"white"}
                   verticalAlign="center"
-                  minHeight="800px"
-                  pb={100}
+                  minHeight={{base: "700px", md:"800px"}}
+                  pb={{base:30, md:100}}
                   
                 >
                 
+
                 <Container maxW={"6xl"} zIndex={10} position={"relative"} mb={35}>
                   <Header  bg={"transparent"} mb={20}/>
-                  <SimpleGrid columns={3} spacing={0} minHeight="500px" alignItems={"left"}>
+                  <SimpleGrid columns={{base: 1, md: 3}} spacing={0}  minHeight={{base: "300px", md:"500px"}} alignItems={"left"}>
                     
-                    <Box>
-                      <Heading mb={2} fontFamily="BebasB" fontSize={"85px"} lineHeight={"90px"} fontWeight={"400"} textTransform={"Uppercase"}>
+                    <Box mt={{base:"200px", md:"0px"}} >
+                      <Heading mb={2} width={{base: "80%", md: "100%" }}fontFamily="BebasB" fontSize={{base: "55px", md:"85px"}} lineHeight={{base: "60px", md:"90px"}} fontWeight={"400"} textTransform={"Uppercase"}>
                         {t("Listening to Rural People 2023")}
                       </Heading>
-                      <Text fontFamily={"heading"} fontSize={"md"} fontWeight={300} mb={3}>{t("HERO_INTRO_23")}</Text>
+                      <Text fontFamily={"heading"} fontSize={"md"} fontWeight={{base: 400, md: 300}} mb={3}>{t("HERO_INTRO_23")}</Text>
                       <Button
                           onClick={handleClick}
                           px={8}
@@ -152,147 +153,145 @@ function Hero22() {
                       <Text fontSize={"xs"} textAlign="left" pt={2}> * Click repeatedly to shuffle playback</Text>
                     </Box>
 
-                    <Box  height='80px'>
-                      
-                    </Box>
-                    <Box  height='80px'>
-                      
-                    </Box>
-                    
-                  </SimpleGrid>
+
+
+
+
+                    </SimpleGrid>
                  
-                {audioSrc && playing && (
-                    <>
-                      <Box
-                        display="flex"
-                        alignItems="center"
-                        justifyContent="left"
-                        bg="#121212"
-                        px={3}
-                        color="#f8f8f8"
-                        minHeight="52px"
-                        fontSize="pt"
-                        mt={10}
-                        borderRadius={"5px"}
-                      >
-                        {playing && (
-                          <>
-                            <Box mx={3} h="100%">
-                              {canPlay ? (
-                                <Spinner
-                                  fadeIn="none"
-                                  color="white"
-                                  name="line-scale-pulse-out"
-                                  style={{
-                                    width: "40px",
-                                    height: "100%",
-                                    marginTop: "6px",
-                                  }}
-                                />
-                              ) : (
-                                <Spinner
-                                  fadeIn="none"
-                                  color="white"
-                                  name="three-bounce"
-                                  style={{
-                                    width: "40px",
-                                    height: "100%",
-                                    marginTop: "6px",
-                                  }}
-                                />
-                              )}
-                            </Box>
-                            <Box mx={2}>
-                              {responseInfo && (
-                                <>
-                                  <VStack spacing={0} align="left">
-                                    <Box fontSize="0.7em" py={3}>
-                                      <Link
-                                        color={
-                                          transcriptionLang === "en" ? "white" : "grey"
-                                        }
-                                        mr={2}
-                                        onClick={() => {
-                                          setTranscriptionLang("en");
-                                        }}
-                                      >
-                                        EN
-                                      </Link>
-                                      <Link
-                                        color={
-                                          transcriptionLang === "fr" ? "white" : "grey"
-                                        }
-                                        onClick={() => {
-                                          setTranscriptionLang("fr");
-                                        }}
-                                      >
-                                        FR
-                                      </Link>
-                                    </Box>
-                                    <Box>
-                                      {transcriptionLang === "en" ? (
-                                        <>
-                                          <Text fontSize="10.5pt" pb={3} color="gray">
-                                            <b>Question:</b>
-                                            <br />
-                                            {responseInfo.question_en}
-                                          </Text>
-                                          <Text
-                                            fontSize="10.5pt"
-                                            pb={3}
-                                            color="white.700"
-                                          >
-                                            {responseInfo.transcription_en}
-                                          </Text>
-                                        </>
-                                      ) : (
-                                        <>
-                                          <Text fontSize="10.5pt" pb={3} color="gray">
-                                            <b>Question:</b>
-                                            <br />
-                                            {responseInfo.question_fr}
-                                          </Text>
-                                          <Text
-                                            fontSize="10.5pt"
-                                            pb={3}
-                                            color="white.700"
-                                          >
-                                            {responseInfo.transcription_fr}
-                                          </Text>
-                                        </>
-                                      )}
-                                    </Box>
-                                  </VStack>
-                                </>
-                              )}
-                            </Box>
-                          </>
-                        )}
-                      </Box>
-                    </>
-                  )}
-                  </Container>
-                </Box>
+                 {audioSrc && playing && (
+                     <>
+                       <Box
+                         display="flex"
+                         alignItems="center"
+                         justifyContent="left"
+                         bg="#121212"
+                         px={3}
+                         color="#f8f8f8"
+                         minHeight="52px"
+                         fontSize="pt"
+                         mt={10}
+                         borderRadius={"5px"}
+                       >
+                         {playing && (
+                           <>
+                             <Box mx={3} h="100%">
+                               {canPlay ? (
+                                 <Spinner
+                                   fadeIn="none"
+                                   color="white"
+                                   name="line-scale-pulse-out"
+                                   style={{
+                                     width: "40px",
+                                     height: "100%",
+                                     marginTop: "6px",
+                                   }}
+                                 />
+                               ) : (
+                                 <Spinner
+                                   fadeIn="none"
+                                   color="white"
+                                   name="three-bounce"
+                                   style={{
+                                     width: "40px",
+                                     height: "100%",
+                                     marginTop: "6px",
+                                   }}
+                                 />
+                               )}
+                             </Box>
+                             <Box mx={2}>
+                               {responseInfo && (
+                                 <>
+                                   <VStack spacing={0} align="left">
+                                     <Box fontSize="0.7em" py={3}>
+                                       <Link
+                                         color={
+                                           transcriptionLang === "en" ? "white" : "grey"
+                                         }
+                                         mr={2}
+                                         onClick={() => {
+                                           setTranscriptionLang("en");
+                                         }}
+                                       >
+                                         EN
+                                       </Link>
+                                       <Link
+                                         color={
+                                           transcriptionLang === "fr" ? "white" : "grey"
+                                         }
+                                         onClick={() => {
+                                           setTranscriptionLang("fr");
+                                         }}
+                                       >
+                                         FR
+                                       </Link>
+                                     </Box>
+                                     <Box>
+                                       {transcriptionLang === "en" ? (
+                                         <>
+                                           <Text fontSize="10.5pt" pb={3} color="gray">
+                                             <b>Question:</b>
+                                             <br />
+                                             {responseInfo.question_en}
+                                           </Text>
+                                           <Text
+                                             fontSize="10.5pt"
+                                             pb={3}
+                                             color="white.700"
+                                           >
+                                             {responseInfo.transcription_en}
+                                           </Text>
+                                         </>
+                                       ) : (
+                                         <>
+                                           <Text fontSize="10.5pt" pb={3} color="gray">
+                                             <b>Question:</b>
+                                             <br />
+                                             {responseInfo.question_fr}
+                                           </Text>
+                                           <Text
+                                             fontSize="10.5pt"
+                                             pb={3}
+                                             color="white.700"
+                                           >
+                                             {responseInfo.transcription_fr}
+                                           </Text>
+                                         </>
+                                       )}
+                                     </Box>
+                                   </VStack>
+                                 </>
+                               )}
+                             </Box>
+                           </>
+                         )}
+                       </Box>
+                     </>
+                   )}
+                   </Container>
+                 </Box>
+
+
+
 
                 <Box
-                  // bg={useColorModeValue("gray.100", "gray.900")}
-                  // color={useColorModeValue("gray.700", "gray.200")}
                   bg={`url(${lbg})`} backgroundSize="contain"
-                  mt="-75px"
+                  mt={{base: "0px", md:"-75px"}}
                   color="white"
                   fontFamily={"BebasR"}
                   textTransform={"Uppercase"}
                 >
-                <Container maxW={"6xl"} zIndex={10} position={"relative"} bg='#4c9f38' borderRadius="5px" >
+                <Container maxW={"6xl"} zIndex={10} position={"relative"} bg='#4c9f38' borderRadius={{base: "0px", md: "5px"}}>
 
-                  <SimpleGrid columns={6} spacing={0} minHeight='90px' py="3">
+                  <SimpleGrid columns={{base: 2, md: 6}} spacingY='50px' minHeight='90px' py={{ base: "10", md: "5"}}>
                     <Box  borderRight="1px solid #fff" textAlign="center" > 
                         <Text fontSize={"60px"} lineHeight={"70px"} fontWeight={"600"} letterSpacing={1} mb={2}>4</Text>
                         <Trans i18nKey="SUMMARY_P_6">
                         <Text fontSize={"25px"} lineHeight={"30px"}>Countries</Text>
                         </Trans>
                     </Box>
-                    <Box borderRight="1px solid #fff"  textAlign="center" >
+                    <Box borderRight={{ base: "0px", md: "1px solid #fff"}}  textAlign="center" >
                         <Text fontSize={"60px"} lineHeight={"70px"} fontWeight={"600"} letterSpacing={1} mb={2}>8</Text>
                         <Trans i18nKey="SUMMARY_P_6">
                         <Text fontSize={"25px"} lineHeight={"30px"}>Radio Stations</Text>
@@ -304,7 +303,7 @@ function Hero22() {
                         <Text fontSize={"25px"} lineHeight={"30px"}>Original Episodes</Text>
                         </Trans>
                     </Box>
-                    <Box borderRight="1px solid #fff"  textAlign="center" >
+                    <Box borderRight={{ base: "0px", md: "1px solid #fff"}}  textAlign="center" >
                         <Text fontSize={"60px"} lineHeight={"70px"} fontWeight={"600"} letterSpacing={1} mb={2}>11,518</Text>
                         <Trans i18nKey="SUMMARY_P_6">
                         <Text fontSize={"25px"} lineHeight={"30px"}>Respondents</Text>
@@ -325,6 +324,14 @@ function Hero22() {
                   </SimpleGrid>
                 </Container> 
                 </Box>
+
+
+
+
+
+
+
+
 
       </Box>
     </>

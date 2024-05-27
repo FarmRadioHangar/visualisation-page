@@ -6,6 +6,8 @@ import Landing22 from "./components/Landing22";
 import About22 from "./components/About22";
 import Landing23 from "./components/Landing23";
 import About23 from "./components/About23";
+import Landing24 from "./components/Landing24";
+import About24 from "./components/About24";
 import { AppContextProvider } from "./contexts/App";
 import {
   createBrowserRouter,
@@ -42,6 +44,14 @@ function App() {
     {
       path: "/oad2023/about-oad23",
       element: <About23 />,
+    },
+    {
+      path: "/oad2024",
+      element: <Landing24 />,
+    }, 
+    {
+      path: "/oad2024/about-oad24",
+      element: <About24 />,
     },
           <ScrollRestoration />
    
